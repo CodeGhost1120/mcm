@@ -15,6 +15,24 @@
 		<h2>{{entry.title}}</h2>
 	</div>
 	
+<div class="container" style="padding: 0px;">
+
+
+	<div class="blog_posts">
+		<div class="blog_post">
+			<div class="story_heading" style = "border-bottom: 1px solid #7F7F7F;
+border-top: 1px solid #7F7F7F;
+color: #7F7F7F;
+font-size: 1.80556vw;
+line-height: 3.47222vw;
+height: 60px;
+text-transform: uppercase;">
+				<p class="alternate_font">{{category}}<span class='story_date'>{{entry.postDate|date('m.d.Y')}}</span></p>
+			</div>
+		</div>
+	</div>
+
+</div>
 	
 	{# Load in Modules #}
 	{% include 'modules/partials/_table_of_contents.html' %}
