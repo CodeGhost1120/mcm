@@ -1,0 +1,103 @@
+{#
+# Module Loader for All templates
+# 'templates/modules/_loader.html'
+#}
+
+{# look through modules for display #}
+
+{% if entry.modules %}
+	{% for block in entry.modules.slice(0,6) %}
+
+		{% if loop.first %}
+
+			{% if block.type =='richText' or block.type=='blockText' %}
+			<div class="container module_break">
+				<div class="break half"></div>
+			</div>
+
+			{% endif %}
+		{% endif %}
+
+		{% if block.type != 'topLevelIntro' %}
+			{% include 'modules/'~block.type~'/_module.html' %}
+		{% endif %}
+
+		{% set break_class = '' %}
+
+		{% if block.next %}
+
+			{# BRIEF SECTION #}
+
+			{% if block.type == 'briefSection'  %}
+				{% set break_class = 'half' %}
+			{% endif %}
+
+
+			{# PHOTO SECTION FOLLOWED BY DARK VIDEO #}
+
+			{% if block.type == 'photoSection' %}
+				{% if block.next.type == 'video' %}
+					{% if block.next.theme == 'dark' %}
+						{% set break_class = 'none' %}
+					{% endif %}
+				{% endif %}
+			{% endif %}
+
+			{# HEADINGS AND RICH TEXT #}
+
+			{% if block.type == 'richText' and block.next.type == 'richText' %}
+				{% set break_class = 'none' %}
+			{% endif %}
+
+			{% if block.type == 'richText' and block.next.type == 'heading' %}
+				{% set break_class = 'half' %}
+			{% endif %}
+
+			{% if block.type == 'heading' %}
+				{% set break_class = 'none' %}
+			{% endif %}
+
+			{% if block.type == 'video' %}
+				{% if block.theme == 'dark' %}
+					{% set break_class = 'half' %}
+				{% endif %}
+			{% endif %}
+
+			{% if block.type == 'topLevelIntro' %}
+				{% set break_class = 'none' %}
+			{% endif %}
+
+			{% if break_class == '' %}
+
+				{% switch block.next.type %}
+					{% case 'briefSection' %}
+						{% set break_class = 'half' %}
+
+					{% case 'newsSection' %}
+						{% set break_class = 'none' %}
+
+					{% case 'photoSection' %}
+						{% set break_class = 'half' %}
+
+					{% case 'video' %}
+						{% if block.next.theme == 'dark' %}
+							{% set break_class = 'half' %}
+						{% else %}
+							{% set break_class = 'full' %}
+						{% endif %}
+
+				{% endswitch %}
+			{% endif %}
+
+			{% if break_class == '' %}
+				{% set break_class = 'full' %}
+			{% endif %}
+		{% endif %}
+
+		{% if not loop.last %}
+			<div class="container module_break">
+				<div class="break {{break_class}}"></div>
+			</div>
+		{% endif %}
+	{% endfor %}
+{% endif %}

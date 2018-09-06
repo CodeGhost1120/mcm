@@ -1,0 +1,56 @@
+.introduction_section{
+	//margin-bottom: span(1);
+	.heading_photo{
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: block;
+		height: 14.72vw;
+		margin-bottom: gutter(12)*4;
+		position: relative;
+	}
+
+	.container{
+		.svg_wrap{			
+			bottom: -1px;
+			height: 3.6vw;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			.mobile{
+				display: block;
+				@include small(){
+					display: none;
+				}
+			}
+			.large{
+				display: none;
+				@include small(){
+					display: block;
+				}
+			}
+		}
+
+	}
+
+	.intro_left{
+		@include span(12);
+		@include small(){
+			@include span(3 wider);
+			@include push(1);
+		}
+		
+		h3{
+			@include h2;
+		}
+	}
+	.intro_description{
+		@include span(10);
+		@include push(1);
+		@include small(){
+			@include span(5);
+			@include push(1);
+		}
+	}
+}
+

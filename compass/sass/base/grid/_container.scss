@@ -1,0 +1,21 @@
+
+@include small()
+{
+	.container{
+		//width: $container_small;
+	}
+}
+
+@include medium()
+{
+	.container{
+		//width: $container_medium;
+	}
+}
+
+@include large()
+{
+	.container{
+		//width: $container_large;
+	}
+}

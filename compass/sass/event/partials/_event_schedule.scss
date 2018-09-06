@@ -1,0 +1,58 @@
+.table_of_contents_wrap + .event_schedule{
+	margin-top: span(1);
+}
+.schedule_heading{
+	.schedule_heading_wrap{
+		@include span(12);
+		padding-bottom: span(1);
+		h4{
+			@include font_size(30,36);
+			@include font_scale(30,36);
+			border-bottom: 3px solid $mcm_red;
+			text-align: left;
+		}
+	}
+}
+
+	//margin-bottom: span(1);
+.schedule_time{
+	@include span(10);
+	@include push(1);
+	color: $mcm_red;
+	font-weight: bold;
+	text-align: left;
+}
+
+.schedule_description_wrap{
+	@include span(10);
+	@include push(1);
+	.schedule_description{
+		position: relative;
+		&.last{
+			border-left: none;
+			.icon{
+				left: -5px;
+				@include large(){
+					left: -5*100/1440+vw;
+				}
+			}
+
+			p{
+				padding-bottom: span(1);
+			}
+		}
+		.icon{
+			display: none;
+		}
+		.schedule_description_text{
+			padding-bottom: span(1);
+		}
+		p{
+			margin-bottom: 0px;
+			padding-bottom: gutter(12);
+			
+		}
+	}
+}
+		
+@import 'event_schedule_desktop';

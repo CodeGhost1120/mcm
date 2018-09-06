@@ -1,0 +1,77 @@
+{#
+# Table of Contents builder for text pages
+# 'modules/partials/_table_of_contents.html'
+#}
+
+{# Check if the page type is a text page #}
+{# If so, run through and get all the headings for the Table of Contents #}
+{% set table_of_contents_links = [] %}
+
+{% if entry.type == 'textPage' or entry.type == 'textPages' or entry.type == 'pages' %}
+	{% if entry.modules %}
+		{% for block in entry.modules.type('heading') %}
+			{% if block.includeInTableOfContents %}
+
+				{% set link_text = block.linkText|default(block.headingText) %}
+				{% set this_link = {
+					'link_text': link_text,
+					'link_href': block.headingText|make_id
+				} %}
+
+				{% set table_of_contents_links = table_of_contents_links|merge([this_link]) %}
+
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% elseif entry.type == 'schedulePage' %}
+	{% if entry.schedule|length %}
+		{% for block in entry.schedule.type('scheduleSectionHeading') %}
+			{% if block.includeInTableOfContents %}
+				{% set link_text = block.sectionHeading %}
+				{% set this_link = {
+					'link_text': link_text,
+					'link_href': link_text|make_id
+				} %}
+
+				{% set table_of_contents_links = table_of_contents_links|merge([this_link]) %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endif %}
+
+{% if table_of_contents_links|length %}
+	<div class="container table_of_contents_wrap">
+		<div class="table_of_contents">
+
+			<ul class="alternate_font sub_menu">
+			{% for link in table_of_contents_links %}
+				<li><a href="#{{link['link_href']}}">{{link['link_text']}}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+
+		{# check if first module is block text #}
+		{% if entry.type == 'textPage' or entry.type == 'textPages' or entry.type == 'pages' %}
+			{% if entry.modules.first().type == 'blockText' %}
+				<div class="standard_content">
+					<div class="block_text narrow">
+							{{entry.modules.first().blockText}}
+					</div>
+				</div>
+			{% endif %}
+		{% else %}
+			<div class="standard_content">
+				<div class="block_text narrow">
+					{{entry.scheduleIntroduction}}
+				</div>
+			</div>
+		{% endif %}
+
+	</div>
+
+	{% if entry.type != 'schedulePage' %}
+	<!-- <div class="container">
+		<div class="break"></div>
+	</div> -->
+	{% endif %}
+{% endif %}

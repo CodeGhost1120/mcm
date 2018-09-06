@@ -1,0 +1,6 @@
+{% if events|length > 0 %}
+	{% for event in events %}
+		<h3>{{event}}</h3>
+		<p>{{event.eventDate|date('U')|days_until}} days left!</p>
+	{% endfor %}
+{% endif %}

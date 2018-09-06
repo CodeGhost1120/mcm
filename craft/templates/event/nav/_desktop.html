@@ -1,0 +1,94 @@
+{#
+# Event Nav for Event Pages - Desktop
+# 'event/nav/_desktop.html'
+#}
+
+{# If current entry isn't top level, get the parent for nav title #}
+{% set parent_entry = craft.marathon.getTopParent(entry) %}
+
+{# Get nav items from main plugin #}
+{% set nav_items = craft.marathon.getNavItems(entry) %}
+
+{% set parent_entry_title = parent_entry ? parent_entry.title : null %}
+
+{% if entry.level > 1 %}
+	{% set nav_link = parent_entry.url %}
+{% else %}
+	{% set nav_link = entry.url %}
+{% endif %}
+
+<div class="event_nav_wrap">
+	<div class="event_nav">
+		<div class="container">
+			<div class="menu_top">
+				<div class="menu_title js-menu-title">
+					<a href="{{nav_link}}" class="js-event-link event_logo logo_{{parent_entry.slug|default(entry.slug)}}"></a>
+					<a href="{{nav_link}}" class="js-event-link event-link">
+						<span class="nav_button"><i class="fa fa-bars"></i></span>
+						<span class="page_title alternate_font">{{parent_entry.title|default(entry.title)}} <span class="drop_down_menu_toggle">&#9662;</span></span>
+					</a>
+
+					<div class="drop-down-menu">
+						{% for page in craft.entries.type('eventLandingPage') %}
+							{% if page.title != entry.title and page.title != parent_entry_title%}
+								<a href="{{page.url}}" class="alternate_font">{{page.title}}</a>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="event_menu_items">
+					{% if nav_items|length %}
+						<ul class="shuttle_pages">
+							{% for nav_item in nav_items %}
+								<li class="main_font"><a href="#" class="js-event-nav-link">{{nav_item.title}}</a></li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="menu_bottom">
+			<div class="container">
+				<button class="btn close-btn js-close-event-menu">&#10006;</button>
+				<div class="glances standard_content">
+					{% for nav_item in nav_items %}
+						<div class="parent_glance">
+							<p>{{nav_item.glance|default("no parent glance")}}</p>
+						</div>
+						{% for sub_page in nav_item.sub_pages %}
+							<div class="glance">
+								<p>{{sub_page.glance|default("no glance")}}</p>
+							</div>
+						{% endfor %}
+					{% endfor %}
+				</div>
+
+				<div class="sub_page_lists">
+					{% set sub_page_count = 0 %}
+					{% for nav_item in nav_items %}
+						<ul class="sub_pages">
+							{% for sub_page in nav_item.sub_pages %}
+								{% if loop.index0 is divisible by(3)%}
+									<div class="list_wrap">
+								{% endif %}
+								{% set active = '' %}
+								{% if sub_page.url == entry.url %}{% set active = ' active' %}{% endif %}
+
+								<li class="{{active}}" data-counter="{{sub_page_count}}">
+									<a class="sub_page_link main_font" href="{{sub_page.url}}">{{sub_page.title}}</a>
+								</li>
+
+								{% if (loop.index0 + 1) is divisible by(3) or loop.last %}
+									</div>
+								{% endif %}
+
+								{% set sub_page_count = sub_page_count + 1 %}
+							{% endfor %}
+						</ul>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- .event_nav_wrap -->

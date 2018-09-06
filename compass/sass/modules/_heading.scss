@@ -1,0 +1,14 @@
+.heading{
+	@include span(10);
+	@include push(1);
+	
+	margin-bottom: 1rem;
+
+	@include small(){
+		@include span(8);
+		@include push(2);
+	}
+
+	//margin-bottom: gutter(12);
+	
+}

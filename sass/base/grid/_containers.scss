@@ -1,0 +1,65 @@
+/*
+* Global Containers
+* 'base/grid/_containers.scss'
+*/
+
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	overflow:hidden;
+	width: 90%;
+}
+
+#content > .container:not(.module_break), .detail_section, .granular_section, .ad_section, .rich_text_module{
+	padding: 2rem 0rem;
+
+	&.heading_module{
+		padding: 0;
+	}
+
+	&:last-of-type{
+		padding-bottom: 4rem;
+	}
+}
+
+.brief_section{
+	padding: 2rem 0rem;
+
+	&:nth-of-type(n+1){
+		padding: 0rem 0rem 2rem 0rem;
+	}
+}
+
+#content > .container.page_hero{
+	padding: 4.5rem 0rem;
+}
+
+#content > .container.table_of_contents_wrap{
+	padding-top: 4rem;
+}
+
+#content > div:last-of-type{
+	display: block;
+	padding-bottom: 4rem;
+}
+
+
+
+
+// @include small(){
+// 	.container{
+// 		width: $container_small;
+// 	}
+// }
+
+// @include medium{
+// 	.container{
+// 		width: $container_medium;
+// 	}
+// }
+
+// @include large(){
+// 	.container{
+// 		width: 90%
+// 	}
+// }

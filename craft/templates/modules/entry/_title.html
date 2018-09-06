@@ -1,0 +1,16 @@
+{#
+# Title for Entry Module
+# 'templates/modules/entry/_title.html'
+#}
+
+{% if mode != 'image' %}
+	<h4><a href="{{blurb_link}}">{{blurb_title}}</a></h4>
+{% else %}
+	
+	<div class="granular_title">
+		<div class="title_icon"></div>
+		<h4 class="granular">{{blurb_title}}</h4>
+	</div>
+	
+
+{% endif %}

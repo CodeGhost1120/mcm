@@ -1,0 +1,19 @@
+.entry_module{
+
+	h4:not(.granular){
+		margin-bottom: gutter(12);
+		a{
+			color: inherit;
+			text-decoration: none;
+			&:hover{
+				color: $mcm_red;
+			}
+		}
+	}
+
+	&.image{
+		a{
+			overflow: hidden;
+		}
+	}
+}

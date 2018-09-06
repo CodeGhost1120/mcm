@@ -1,0 +1,17 @@
+{#
+# Brief Module - Content
+# 'templates/modules/breifSection/partials/_content.html'
+#}
+
+<div class="brief_content standard_content">
+	<div class="container brief_content_internal">
+		{% import 'modules/entry/_module.html' as entry_macro %}
+		{% set settings = {'type' : 'full', 'count':1, 'entries':1, 'image_size':'wide'} %} 
+		{{entry_macro.build(block, settings)}}
+
+		{% set settings = {'type' : 'full', 'count':2, 'entries':2, 'image_size':'wide'} %} 
+		{{entry_macro.build(block, settings)}}
+		
+	</div>
+	<div class="border"></div>
+</div>

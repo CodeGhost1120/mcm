@@ -1,0 +1,19 @@
+// @mixin span($cols)
+// {	
+// 	float: left;
+// 	width: percentage((($column * $cols) + ($gutter * ($cols - 1))) / $container_large);
+// }
+
+// @function gutter($arg){
+// 	@return percentage($gutter/$container_large);
+// }
+
+@mixin span($cols, $gutters)
+{
+	float: left;
+	width: widthify($cols, $gutters);
+}
+
+@mixin gutter($amt){
+	
+}

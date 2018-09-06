@@ -1,0 +1,126 @@
+.ad_section{
+	.ad_gallery{
+		
+		height: 1634*100/1344+vw;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		.ad{
+			position: absolute;
+
+			a{
+				display: block;
+				height: 100%;
+			}
+			
+			img{
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.small{
+			height: 375*100/1344+vw;
+			width: percentage(416/1344);
+		}
+
+		.medium{
+			height: 375*100/1344+vw;
+			width: percentage(880/1344);
+		}
+
+		.large{
+			height: 788*100/1344+vw;
+			width: 100%;
+		}
+
+		#ad_0{
+			left: 0vw;
+			top: 0vw;
+		}
+
+		#ad_1{
+			top:0vw;
+			$val: widthify(4, 4);
+			left: $val;
+		}
+
+		#ad_3{
+			right: 0vw;
+			top: 0vw;
+		}
+
+		#ad_2{
+			right: 0vw;
+			top: (375 + 48)*100/1344+vw;
+		}
+
+		#ad_4{
+			right: 0vw;
+			bottom: 0vw;
+		}
+
+		#ad_5{
+			bottom: 0vw;
+			left: 0vw;
+		}
+	}
+
+	@include small(){
+		.ad_gallery{
+			//background-color: green;
+			width: 100%;
+			height: 380*100/1344+vw;
+			overflow: hidden;
+			position: relative;
+			
+
+			.small{
+				height: 166*100/1344+vw;
+				width: percentage(184/1344);
+			}
+
+			.medium{
+				height: 166*100/1344+vw;
+				width: percentage(416/1344);
+			}
+
+			.large{
+				height: 380*100/1344+vw;
+				width: percentage(648/1344);
+			}
+
+			#ad_0{
+				left: 0vw;
+				top: 0vw;
+			}
+
+			#ad_1{
+				top: (((166 + 48) * 100)/1344)+vw;
+				left: 0vw; 
+			}
+
+			#ad_2{
+				left: percentage(232/1344);
+				top: 0vw;
+			}
+
+			#ad_3{
+				right: percentage(232/1344);
+				top: 0vw;
+			}
+
+			#ad_4{
+				right: 0vw;
+				top: 0vw;
+			}
+
+			#ad_5{
+				bottom: 0vw;
+				$val: widthify(8, 8);
+				left: $val;
+			}
+		}
+	}
+}

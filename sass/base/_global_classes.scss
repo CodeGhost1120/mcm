@@ -1,0 +1,73 @@
+/*
+* Global Classes
+* 'base/_global_classes.scss'
+*/
+
+
+// #content{
+// 	margin-top: 94px;
+// 	@include large(){
+// 		margin-top: 120px;
+// 	}
+// }
+
+// .container{
+// 	@include container();
+// }
+
+// .full{
+// 	@include span(12);
+// }
+
+.centered{
+	@include auto_margins;
+	width: widthify(6,6);
+}
+
+
+.container.module_break{
+	.break{
+		display: block;
+		height: 1px;
+		width: 100%;
+
+		&.full{
+			background-color: #E1E1E1;
+			margin-top: $column;
+			margin-bottom: $column;
+		}
+
+		&.half{
+			background-color: white;
+			height: 0px;
+			// margin-top: $column;
+		}
+
+		&.no_line{
+			background-color: white;
+			// margin-top: $column;
+			// margin-bottom: $column;
+		}
+
+		&.none{
+			height: 0px;
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+	}
+}
+
+// .clear{
+// 	@include clearfix;
+// }
+
+// .page_title{
+// 	h2{
+// 		@include h1;
+// 		@include span(12);
+// 	}
+// }
+
+.offscreen{
+	text-indent: -10000px;
+}

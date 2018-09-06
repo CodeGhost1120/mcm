@@ -1,0 +1,43 @@
+.grid_section{
+	.grid{
+		.item{
+			display: block;
+			height: auto;
+			margin-bottom: span(1);
+			@include span(12);
+			a{
+				color: black;
+				display: block;
+				height: 100%;
+				text-decoration: none;
+				width: 100%;
+				&:hover{
+					color: $link;
+					text-decoration: underline;
+				}
+			}
+			img{
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+			p{
+				@include h3;
+				margin-top: gutter(12);
+			}
+		}
+	}
+}
+
+@include small(){
+	.grid_section .grid .item{
+		@for $i from 1 through 12{
+			&.col-#{$i}{
+				@include span($i);
+			}
+			&.new_row{
+				@include break;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{#
+# Video Module
+# 'templates/modules/video/_module.html'
+#}
+
+<div class="video {{block.theme}}">
+	<div class="container">
+		<div class="large_player">
+			<div style="display: block; position: relative; max-width: 100%;">
+				<div style="display: block; padding-top: 56.25%;">
+					<video 	
+						data-video-id="{{block.videoId}}" 
+						data-account="4270602639001"
+						data-player="{{block.playerId|default('50b7c76c-52d0-4591-a49d-3ef048e919a2')}}"
+						data-embed="default" 
+						class="video-js" 
+						controls="" 
+						style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% includeJsFile "//players.brightcove.net/4270602639001/50b7c76c-52d0-4591-a49d-3ef048e919a2_default/index.min.js" %}

@@ -1,0 +1,39 @@
+{% set no_glance = craft.entries.section(['blog', 'blogLandingPage', 'events', 'homepage', 'pages']).glance(':empty:').limit(null) %}
+
+<h1>{{no_glance|length}} Entries With No Glance</h1>
+{% if no_glance|length %}
+	<ol>
+	{% for entry in no_glance %}
+		<li><a target="_blank" href="{{siteUrl}}admin/entries/{{entry.section.handle}}/{{entry.id}}">{{entry.title}}</a></li>
+	{% endfor %}
+	</ol>
+{% endif %}
+
+
+{% set assets = craft.assets.limit(null) %}
+
+
+
+{% set has_image = craft.entries.section(['blog', 'blogLandingPage', 'events', 'homepage', 'pages']).relatedTo({
+    targetElement: assets,
+    field: 'featureImage'
+}).ids() %}
+
+{% set str = has_image|join(', not ') %}
+
+{% set all_entries = craft.entries.section(['blog', 'blogLandingPage', 'events', 'homepage', 'pages']).limit(null) %}
+
+{% set no_image = craft.entries({
+	section: ['blog', 'blogLandingPage', 'events', 'homepage', 'pages'],
+	id: 'and, not '~str,
+	limit: null
+}) %}
+
+<h1>{{no_image|length}} Entries With No Featured Image</h1>
+{% if no_image|length %}
+	<ol>
+	{% for entry in no_image %}
+		<li><a target="_blank" href="{{siteUrl}}admin/entries/{{entry.section.handle}}/{{entry.id}}">{{entry.title}}</a></li>
+	{% endfor %}
+	</ol>
+{% endif %}

@@ -1,0 +1,79 @@
+/*
+* Grid Section
+* 'global/_grid_section.scss'
+*/
+
+*{
+	box-sizing: border-box;
+}
+
+.grid_section{
+	.grid{
+		.item{
+			display: block;
+			height: auto;
+			margin-bottom: widthify(1,1);
+			width: 100%;
+			a{
+				color: black;
+				display: block;
+				height: 100%;
+				text-decoration: none;
+				width: 100%;
+				&:hover{
+					color: $link;
+					text-decoration: underline;
+				}
+			}
+
+			img{
+				display: block;
+				height: auto;
+				width: 100%;
+			}
+
+			p{
+				@include h3;
+				margin-top: $gutter;
+			}
+		}
+	}
+}
+
+@include small(){
+	.grid_section{
+		.grid{
+			.item{
+				@for $i from 1 through 12{
+					&.col-#{$i}{
+						float: left;
+						width: $i / 12 * 100%;
+					}
+				}
+
+				img{
+					@include auto_margins;
+					width: 75%;
+				}
+
+				&.new_row{
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+body[class*="sponsors"], body[class^="sponsors"]{
+	.grid_section{
+		.grid{
+			display: flex;
+			flex-wrap: wrap;
+			
+			.item{
+				display: flex;
+				align-self: center;
+			}
+		}
+	}
+}

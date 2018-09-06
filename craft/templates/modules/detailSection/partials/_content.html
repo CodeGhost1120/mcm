@@ -1,0 +1,43 @@
+{#
+# Content partial for detail section module
+# 'templates/modules/detailSection/partials/_content.html'
+#}
+
+{% set twoUp = block.linkedEntry_2|length > 0 or block.linkedEntry_2|length > 0 %}
+{% set threeUp = block.linkedEntry_3|length > 0 or block.linkedEntry_3|length > 0 %}
+
+{% if threeUp %}
+	{% set class = 'third' %}
+{% else %}
+	{% if twoUp %}
+		{% set class = 'half' %}
+	{% else %}
+		{% set class = 'full' %}
+	{% endif %}
+{% endif %}
+
+<div class="detail_content clear {{class}}">
+
+	{% import 'modules/entry/_module.html' as entry_macro %}
+
+	<div class="detail_entry">
+	{% set settings = {'type' : 'full', 'count':1, 'entries':3, 'image_size':'square'} %}
+	{{entry_macro.build(block, settings)}}
+	</div>
+
+
+	{% if twoUp %}
+	<div class="detail_entry">
+	{% set settings = {'type' : 'full', 'count':2, 'entries':3, 'image_size':'square'} %}
+	{{entry_macro.build(block, settings)}}
+	</div>
+	{% endif %}
+
+	{% if threeUp %}
+	<div class="detail_entry">
+	{% set settings = {'type' : 'full', 'count':3, 'entries':3, 'image_size':'square'} %}
+	{{entry_macro.build(block, settings)}}
+	</div>
+	{% endif %}
+
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "mcm",
+  "version": "1.0.0",
+  "description": "Marine Corps Marathon Redesign and rebuild",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nclud/mcm.git"
+  },
+  "author": "Ramsay Lanier <ramsaylanier@gmail.com> (ramsaylanier.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nclud/mcm/issues"
+  },
+  "homepage": "https://github.com/nclud/mcm#readme",
+  "dependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-sass": "^2.3.1"
+  }
+}

@@ -1,0 +1,99 @@
+.standard_content{
+
+  .button{
+    display: inline-block;
+
+    &:not(:last-of-type){
+      margin-right: 1rem;
+    }
+
+    a{
+      display: block;
+      background-color: $mcm_red;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      transition: all 150ms ease-out;
+
+      &:hover{
+        color: white;
+        background-color: darken($mcm_red, 10%);
+      }
+    }
+  }
+
+  .download-button a, .external-button a{
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:after{
+      content: '';
+      position: relative;
+      margin-left: 1rem;
+      height: 18px;
+      background-size: cover;
+      width: 18px;
+      background-position: center;
+    }
+  }
+
+  .download-button a{
+    &:after{
+      background-image: url('../img/icons/download.png');
+    }
+  }
+
+  .external-button a{
+    &:after{
+      background-image: url('../img/icons/external.png');
+    }
+  }
+}
+
+
+.square-button{
+  background-color: $mcm_red;
+  color: white;
+  font-family: $unica;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: .5rem;
+  width: 215px;
+  transition: all 150ms ease-out;
+  text-align: center;
+
+
+  @include medium(){
+    &:first-of-type{
+      margin-right: .5rem;
+    }
+  }
+
+  &:hover{
+    background-color: $mcm_gold;
+    color: black;
+  }
+}
+
+.home_registration_btn{
+	@include span(1.8,1.8);
+	text-align: center;
+	position: absolute;
+	right: 5%;
+	border: 1px solid $mcm_gold;
+	color: white;
+	text-decoration: none;
+	padding: vw(1.5rem);
+	font-size: vw(2.5rem);
+	top: 50%;
+	transform: translateY(-50%);
+  transition: all 150ms ease-out;
+
+  &:hover{
+    background-color: black;
+    // border: 1px solid $mcm_red;
+    color: $mcm_gold;
+  }
+}

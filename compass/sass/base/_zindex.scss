@@ -1,0 +1,71 @@
+.main_nav{
+	z-index: 9990;
+}
+
+.event_nav
+{
+	z-index: 9980;
+
+	.event_menu_items{
+		z-index: 9980;
+	}
+}
+
+
+.brief_section{
+	.container{
+		z-index: 500;
+	}
+
+	.breif_content{
+		&:before, &:after{
+			z-index: 400;
+		}
+	}
+
+	.border{
+		&:before, &:after{
+			z-index: 500;
+		}
+	}
+
+
+}
+
+.granular_section{
+	.entry_module{
+		z-index: 500;
+		.granular_title{
+			h4{
+				z-index: 500;
+			}
+		}
+	}
+}
+
+@include small(){
+	.call_to_action{
+		p{
+			z-index: 900;
+		}
+
+		.cta_logo{
+			z-index: 800;
+
+			.logo{
+				z-index: 9999;
+			}
+
+		}
+	}
+
+	.granular_section{
+		.entry_module{
+			.granular_title{
+				.title_icon{
+					z-index: 550;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+{#
+# Brief Module - Heading Photo
+# 'templates/modules/breifSection/partials/_heading_photo.html'
+#}
+
+{# Banner Image #}
+{% set mobile_thumb = {
+	mode: 'fit',
+	width: 768,
+	quality: 75
+} %}
+
+{% set desktop_thumb = {
+	mode: 'fit',
+	width: 2100,
+	quality: 75
+} %}
+
+{% if craft.request.isMobileBrowser() %}
+	{% set banner_image = block.headingPhoto[0].getUrl(mobile_thumb)|default('') %}
+{% else %}
+	{% set banner_image = block.headingPhoto[0].getUrl(desktop_thumb)|default('') %}
+{% endif %}
+
+{% set heading_photo_css %}
+	#brief_heading_photo_{{loop.index}}.heading_photo{
+		background-image: 
+			linear-gradient(
+		      rgba(207, 34, 43, 0.75), 
+		      rgba(207, 34, 43, 0.75)
+		    ),
+		    url({{banner_image}});
+	}
+	
+	.no-cssgradients #brief_heading_photo_{{loop.index}}.heading_photo{
+		background-image: url({{banner_image}});
+	}
+{% endset %}
+
+{% includeCss heading_photo_css %}
+
+<div class="heading_photo standard_content" id="brief_heading_photo_{{loop.index}}">
+	<h3>{{block.heading}}</h3>
+	<h4 class="alternate_font sub_heading">{{block.subHeading}}</h4>
+</div>

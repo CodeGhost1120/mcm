@@ -1,0 +1,115 @@
+@import "compass/css3/transition";
+
+$normal_size: 46;
+$calculated: 46*100/1440 +rem;
+
+.granular_section{
+	.entry_module{
+		@include span(10);
+		@include push(1);
+
+		margin-bottom: span(1);
+		&:last-of-type{
+			margin-bottom: 0px;
+		}
+		position: relative;
+
+		@include small(){
+			@include span(3);
+		}
+
+		a{
+			color: white;
+			display: block;
+			height: 100%;
+			text-decoration: none;
+			width: 100%;
+			
+
+		}
+
+		.granular_title{
+			@include span(12);
+			bottom: 0px;
+			height: 46px;
+			overflow: hidden;
+			position: relative;
+			right: 0px;
+			.title_icon{
+				display: none;
+			}
+			h4{
+				background-color: $dark_link;
+				bottom: 0px;
+				color: white;
+				font-size: 18px;
+				min-height: 46px;
+				left: 0%;
+				line-height: 46px;
+				padding-left: gutter(12) * 3;
+				position: absolute;
+				width: 100%;
+				
+			}
+		}
+		
+		@include small(){
+			.granular_title{
+				position: absolute;
+				.title_icon{
+					background-color: $link;
+					background-image: url($link_arrows_white);
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: percentage(17/46) percentage(20/46);
+					display: block;
+					height: 46px;
+					position: absolute;
+					right: 0px;
+					width: 46px;
+				}
+
+				h4{
+					left: 100%;
+					height: 46px;
+					@include yep('csstransitions'){
+						@include transition-property(left);
+						//@include transition-property(color);
+						@include transition-duration(.5s);
+					}
+				}
+			}
+		}
+
+		
+
+		&:hover{
+			.granular_title{
+				h4{
+					left: 0%;
+				}
+			}
+		}
+		
+
+		@include large(){
+			.granular_title{
+				height: $calculated;
+				.title_icon{
+					height: $calculated;
+					width: $calculated;
+				}
+				h4{
+					font-size: 18*100/1440+rem;
+					height: $calculated;
+					line-height: $calculated;
+				}
+			}
+		}
+		img{
+			display: block;
+			@include span(12);
+
+		}
+	}
+}

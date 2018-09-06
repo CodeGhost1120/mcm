@@ -1,0 +1,67 @@
+@import "compass/css3/transition";
+
+ul.sub_menu{
+	.banner_menu &{
+		bottom: 0px;
+		right: 0px;
+
+		li{
+			a{
+				font-size: 1.625rem;
+				height: 42px;
+				line-height: 42px;
+				@include large(){
+					font-size: 1.625vw;
+					height: (42*100/1440)+vw;
+					line-height: (42*100/1440)+vw;
+				}
+			}
+		}
+	}
+
+	.table_of_contents &{
+		li{
+			a{
+				font-size: 1.375rem;
+				height: 42px;
+				line-height: 42px;
+				@include large(){
+					font-size: 1.375vw;
+					height: (42*100/1440)+vw;
+					line-height: (42*100/1440)+vw;
+				}
+			}
+		}	
+	}
+
+
+	position: relative;
+	
+	li{
+		margin-bottom: gutter(12);
+		a{
+			background-color: black;
+			display: block;
+			color: white;
+			padding-left: gutter(12)*2;
+			padding-right: gutter(12)/2;
+			text-decoration: none;
+			text-transform: uppercase;
+			@include yep('csstransitions'){
+				@include transition-property(padding-left, color);
+				//@include transition-property(color);
+				@include transition-duration(.1s);
+			}
+			
+			&:hover, &:focus, &:active{
+				color: $accent;
+				@include yep('csstransitions'){
+					padding-left: gutter(12)*3;
+				}
+			}
+		}
+		&:last-of-type{
+			margin-bottom: 0px;
+		}
+	}
+}

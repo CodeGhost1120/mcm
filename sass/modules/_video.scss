@@ -1,0 +1,35 @@
+/*
+* Video Module
+* 'modules/_video.scss'
+*/
+
+video{
+	max-width: 100%;
+}
+
+.video:not(html){
+	padding-bottom: 2rem;
+
+	&.light{
+		background-color: white;
+	}
+
+	&.dark{
+		background-color: black;
+		padding-bottom: $gutter;
+		padding-top: $gutter;
+	}
+
+	.large_player{
+		width: 100%;
+	}
+}
+
+@include small(){
+	.video{
+		.large_player{
+			@include auto_margins;
+			width: widthify(8, 7);
+		}
+	}
+}

@@ -1,0 +1,171 @@
+/*
+* Photo Module
+* 'modules/_photoSection.scss'
+*/
+
+.photo_section{
+	background-image: url($concrete_wall);
+	background-repeat: repeat;
+	padding-bottom: $gutter;
+	margin-top: 2rem;
+
+	.container{
+		// width: 100%;
+		// padding: 2rem;
+	}
+
+	.photo_heading{
+		background-color: black;
+		margin-bottom: $gutter;
+		h4{
+			color: white;
+			font-size: 1.9375rem;
+			line-height: 2.1875rem;
+			padding-bottom: $gutter;
+			padding-top: $gutter;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	.photo_gallery{
+		$height: ($column * 24) + ($gutter * 23);
+		height: vw($height);
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		.photo{
+			position: absolute;
+			img{
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.square{
+			$width: ($column * 4) + ($gutter * 3);
+			height: vw($width);
+			width: percentage($width/$container_large);
+		}
+
+		.wide{
+			$height: ($column * 4) + ($gutter * 3);
+			$width: ($column * 8) + ($gutter * 7);
+			height: vw($height);
+			width: percentage($width/$container_large);
+		}
+
+		.tall{
+			$height: ($column * 8) + ($gutter * 7);
+			$width: ($column * 4) + ($gutter * 3);
+			height: vw($height);
+			width: percentage($width/$container_large);
+		}
+
+		$mobile_positons: (
+			((0, 0), (0, 0)),
+			((4, 4), (0, 0)),
+			((8, 8), (0, 0)),
+			((4, 4), (8, 8)),
+			((0, 0), (8, 8)),
+			((0, 0), (4, 4)),
+			((8, 8), (12, 12)),
+			((0, 0), (16, 16)),
+			((8, 8), (16, 16)),
+			((4, 4), (16, 16)),
+			((0, 0), (12, 12)),
+			((0, 0), (20, 20)),
+			((4, 4), (20, 20)),
+		);
+
+		$count: 1;
+		@each $position in $mobile_positons{
+			#photo_#{$count}{
+				left: percentage(($column * nth(nth($position, 1), 1) + ($gutter * nth(nth($position, 1), 2)))/$container_large);
+				top: vw(($column * nth(nth($position, 2), 1) + ($gutter * nth(nth($position, 2), 2))));
+			}
+			$count: $count + 1;
+		}
+	}
+}
+
+@include small(){
+	.photo_section{
+		.photo_heading{
+			h4{
+				font-size: 1.9375rem;
+				line-height: 3.9375rem;
+				padding: 0rem;
+			}
+		}
+
+		.photo_gallery{
+			height: vw(($column * 6) + ($gutter * 5) *.9);
+			.square{
+				$width: ($column * 2) + ($gutter * 1);
+				height: vw($width * .9);
+				width: percentage($width/$container_large);
+			}
+
+			.wide{
+				$height: ($column * 2) + ($gutter * 1);
+				$width: ($column * 4) + ($gutter * 3);
+				height: vw($height *.9);
+				width: percentage($width/$container_large);
+			}
+
+			.tall{
+				$height: ($column * 4) + ($gutter * 3);
+				$width: ($column * 2) + ($gutter * 1);
+				height: vw($height * .9);
+				width: percentage($width/$container_large);
+			}
+
+			$desktop_positions:(
+				((0, 0), (0, 0)),
+				((2, 2), (0, 0)),
+				((4, 4), (0, 0)),
+				((6, 6), (0, 0)),
+				((10, 10), (0, 0)),
+				((0, 0), (2, 2)),
+				((6, 6), (2, 2)),
+				((8, 8), (2, 2)),
+				((10, 10), (2, 2)),
+				((0, 0), (4, 4)),
+				((2, 2), (4, 4)),
+				((6, 6), (4, 4)),
+				((8, 8), (4, 4)),
+			);
+
+			//TODO: ADD COMMENTS
+
+			$count: 1;
+			@each $position in $desktop_positions{
+				#photo_#{$count}{
+					left: percentage(($column * nth(nth($position, 1), 1) + ($gutter * nth(nth($position, 1), 2)))/$container_large);
+					top: vw(($column * nth(nth($position, 2), 1) + ($gutter * nth(nth($position, 2), 2))) *.9);
+				}
+				$count: $count + 1;
+			}
+		}
+	}
+}
+
+@include large(){
+	.photo_section{
+		.photo_heading{
+			h4{
+				font-size: vw(1.9375rem);
+				line-height: vw(3.9375rem);
+			}
+		}
+	}
+}
+
+.embed{
+	iframe{
+		max-width: 100% !important;
+	}
+}

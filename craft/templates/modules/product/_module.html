@@ -1,0 +1,44 @@
+{#
+# Product Partial for Standard Content Matrix
+# 'content/partials/product.html'
+#}
+
+{# Set up thumbs for images #}
+{% set mobile_thumb = {
+	mode: 'fit',
+	width: 768,
+	quality: 75
+} %}
+
+{% set desktop_thumb = {
+	mode: 'fit',
+	width: 500,
+	quality: 75
+} %}
+
+
+
+<div class="product_module container standard_content">
+	<div class="product">
+		{# Check if there is an image #}
+		{% if block.productImage|length %}
+
+			{% if craft.request.isMobileBrowser() %}
+				{% set image = block.productImage[0].getUrl(mobile_thumb) %}
+			{% else %}
+				{% set image = block.productImage[0].getUrl(desktop_thumb) %}
+			{% endif %}
+			<div class="product_image">
+				<img src="{{image}}" alt="{{block.productImage[0].altText|default('')}}">
+			</div>
+		{% endif %}
+
+    <div class="product_info">
+      <h4 class="product_title">{{block.productName}}</h4>
+  		<p class="product_description">{{block.productDescription}}</p>
+
+      <a class="btn primary-btn" href="{{block.productLink}}" target="_blank">Shop Now</a>
+
+    </div>
+	</div>
+</div>

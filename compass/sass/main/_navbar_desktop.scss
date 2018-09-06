@@ -1,0 +1,268 @@
+@import "compass/css3/transition";
+
+$nav_height: 8rem;
+
+@include small(){
+	.main_nav{
+		background-color: $nav_background;
+		border-bottom: 4px solid $nav_bottom;
+		margin-top: 0px;
+		height: $nav_height;
+		position: relative;
+
+		.container{
+			position: relative;
+			//padding-bottom: 22px;
+			//padding-top: 22px;
+		}
+
+		.brand{
+			@include span(1 wide);
+			bottom: 0px;
+			margin-top: .5rem;
+			position: relative;
+		}
+
+		.search_form{
+			display: none;
+			//float: right;
+		}
+
+		h1{
+			a{
+				background-position: center bottom;
+				background-size: contain;
+				display: block;
+				padding: 0px;
+				height: 6rem;
+			}
+		}
+
+		.arrows{
+			display: block;
+			margin-left: auto;
+			//margin-right: auto;
+			height: 23px;
+			width: 10px;
+			.arrow{
+				//background-image: url($nav_arrow);
+				background-repeat: no-repeat;
+				//background-position: center center;
+				//background-size: contain;
+				display: block;
+				height: 23px;
+				float: left;
+				width: 9px;
+			}
+		}
+
+		.global_nav_wrap{
+			@include span(8);
+			@include pull(1);
+			//background-color: pink;
+			display: block;
+			height: $nav_height;
+			overflow: hidden;
+			position: relative;
+		}
+
+		nav.global_nav{
+			bottom: 1rem;
+			display: block;
+			height: 26px;
+			padding-left: span(2);
+			position: absolute;
+			text-align: left;
+			width: 100%;
+			a.nav_link{
+				color: white;
+				display: inline-block;
+				height: 26px;
+				line-height: 26px;
+				@include font_size(26, 26);
+				@include font_scale(26, 26);
+				margin-left: span(1 of 12)/2;
+				margin-right: span(1 of 12) / 2;
+				text-align: center;
+				text-decoration: none;
+				&:first-of-type{
+					margin-left: 0px;
+				}
+				&:last-of-type{
+					margin-right: 0px;
+				}
+
+				&.search_link{
+					i{
+						background-image: url($search);
+						background-position: center center;
+						background-repeat: no-repeat;
+						background-size: 23px 23px;
+						display: block;
+						height: 100%;
+						width: 26px;
+					}
+				}
+			}
+		}
+	}
+
+	.call_to_action{
+		@include span(3 of 12);
+		height: 4rem;
+		//right: gutter(12);
+		//position: absolute;
+		//top: 0px;
+		
+		p{
+			height: 90%;
+			position: relative;
+			text-align: center;
+			a{
+				color: white;
+				height: $call_to_action_height_desktop;
+				line-height: $call_to_action_height_desktop;
+				text-decoration: none;
+			}
+		}
+
+		.cta_logo{
+			display: block;
+			height: 110%;
+			padding-left: 12px;
+			padding-right: 12px;
+			padding-top: 12px;
+			position: relative;
+			text-align: center;
+			top: 0%;
+			width: 100%;
+
+			//@include transition_all(.75s);
+
+			.logo{
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				//bottom: -55px;
+				height: 125%;
+				width: 100%;
+				position: relative;
+
+				//@include transition_all(.75s);
+			}
+
+			&:before, &:after{
+				border-bottom: 4px solid $nav_bottom;
+				content: '';
+				position: absolute;
+				//@include transition_all(.75s);
+			}
+
+			$skew: 20deg;
+
+			&:before{
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 50%;
+				//background: #CF222B;
+				transform-origin: bottom left;
+				-webkit-transform: skewY($skew);
+				-moz-transform: skewY($skew);
+				-ms-transform: skewY($skew);
+				-o-transform: skewY($skew);
+				transform: skewY($skew);
+			}
+
+			&:after{
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 50%;
+				//background: #CF222B;
+				transform-origin: bottom right;
+				-webkit-transform: skewY(-$skew);
+				-moz-transform: skewY(-$skew);
+				-ms-transform: skewY(-$skew);
+				-o-transform: skewY(-$skew);
+				transform: skewY(-$skew);				
+			}
+		}
+
+		&.red{
+			
+			p{
+				background-color: $mcm_red;
+			}
+			.cta_logo{
+				background: darken($mcm_red, 10);
+				&:before, &:after{
+					background: darken($mcm_red, 10);
+				}
+				
+			}
+			
+		}
+		&.yellow{
+			
+			p{
+				background-color: $mcm_gold;
+			}
+			.cta_logo{
+				background: darken($mcm_gold, 10);
+				&:before, &:after{
+					background: darken($mcm_gold, 10);
+				}
+			}
+
+		}
+
+		$logos: 'historic_10', 'historic_half', 'mcm_kids', 'mcm', 'run_amuck', 'semperfred_stacked', 'thirteen_one', 'triathalon', 'turkey_trot';
+		&.red{
+			.cta_logo .logo{
+				@each $logo in $logos {
+					  &.#{$logo} { background-image: url($race_logo_path +'white/'+ $logo + ".svg"); }
+				}
+			}
+		}
+
+		&.yellow{
+			.cta_logo .logo{
+				@each $logo in $logos {
+					  &.#{$logo} { background-image: url($race_logo_path +'black/'+ $logo + ".svg"); }
+				}
+			}
+		}
+	}
+}
+
+
+// @include medium(){
+// 	nav.global_nav{
+// 		a.nav_link{
+// 			margin-right: span(1 of 12);
+// 		}
+// 	}
+
+// 	.call_to_action{
+// 		//width: 290px;
+// 		.cta_logo{
+// 			top: -48px;
+// 		}
+// 	}
+// }
+
+// @include large(){
+// 	.call_to_action{
+// 		//width: 360px;
+// 		.cta_logo{
+// 			height: 114*100/1440+vw;
+// 			top: -54*100/1440+vw;
+// 			.logo{
+
+// 			}
+// 		}
+// 	}
+// }
+
+@import 'main/navbar_large';

@@ -1,0 +1,12 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+craft/storage/*
+htdocs/uploads/*
+*.scssc
+htdocs/assets/.DS_Store
+htdocs/.DS_Store
+node_modules

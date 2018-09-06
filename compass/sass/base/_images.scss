@@ -1,0 +1,39 @@
+/*
+* Images for CSS
+* 'base/_images.scss'
+*/
+
+//$path: "http://mcm.craft.dev/assets/img/";
+$path: "http://mcm.nclud.com/assets/img/";
+
+$mcm_logo: $path+'logos/mcm.png';
+$mcm_logo_dark_svg: $path+'logos/mcm_dark.svg';
+$mcm_logo_light_svg: $path+'logos/mcm_light.svg';
+$mcm_logo_light_no_title_svg: $path+'logos/mcm_light_no_title.svg';
+
+// ICONS
+$link_arrows: $path+'icons/link.svg';
+$link_arrows_reverse: $path+'icons/link_reverse.svg';
+$link_arrows_white: $path+'icons/link_white.svg';
+$arrow_wrap: $path+'icons/arrow_wrap.svg';
+$down_arrows: $path+'icons/down_arrows.svg';
+$nav_arrow: $path + 'icons/nav_arrow.svg';
+$search: $path + 'icons/search.svg';
+
+
+// TEXTURES
+$black_texture: $path + 'textures/dark-bg.jpg';
+//$concrete_wall: $path + 'textures/concrete_wall.png';
+$concrete_wall: $black_texture;
+
+//CTA Logos
+$race_logo_path: $path +'logos/';
+$thirteen_one: $race_logo_path + 'thirteen_one.svg';
+$historic_10: $race_logo_path + 'historic_10.svg';
+$historic_half: $race_logo_path + 'historic_half.svg';
+$mcm_kids: $race_logo_path + 'mcm_kids.svg';
+$mcm: $race_logo_path + 'mcm.svg';
+$run_amuck: $race_logo_path + 'run_amuck.svg';
+$semperfred_stacked: $race_logo_path + 'semperfred_stacked.svg';
+$triathalon: $race_logo_path + 'triathalon.svg';
+$turkey_trot: $race_logo_path + 'turkey_trot.svg';

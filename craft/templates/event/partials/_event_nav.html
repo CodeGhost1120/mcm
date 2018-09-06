@@ -1,0 +1,62 @@
+{#
+# Event Nav for Event Pages
+# 'events/partials/_event_nav.html'
+#}
+
+{# If current entry isn't top level, get the parent for nav title #}
+{% set parent_entry = craft.marathon.getTopParent(entry) %}
+
+{# Get nav items from main plugin #}
+{% set nav_items = craft.marathon.getNavItems(entry) %}
+
+
+<div class="event_nav_wrap">
+	<div class="event_nav">
+		<div class="container">
+			<div class="menu_title">
+				<a class="alternate_font" href="#">
+					<span class='nav_button'> ||| </span>
+					<span class='page_title'>{{parent_entry.title|default(entry.title)}}</span>
+				</a>
+			</div>
+			<div class="event_menu_items">
+				{% if nav_items|length > 0 %}
+				<ul class="shuttle_pages">
+					{% for nav_item in nav_items %}
+						<li class="main_font"><a href="#">{{nav_item.title}}</a>
+							
+						</li>
+					{% endfor %}
+				</ul>
+
+				{% endif %}
+			</div>
+
+			<div class="glances">
+				{% for nav_item in nav_items %}
+					<p>{{nav_item.glance|default('no glance')}}</p>
+					{% for sub_page in nav_item.sub_pages %}
+						<p>{{sub_page.glance|default('no glance')}}</p>
+					{% endfor %}
+				{% endfor %}
+			</div>
+
+			<div class="sub_menu_wrap">
+				{% set counter = -1 %}
+				{% for nav_item in nav_items %}
+					
+					<ul class="sub_pages">
+						{% set counter = counter + 1 %}
+						<li data-counter={{counter}} class="alternate_font"><a href="{{nav_item.url}}">{{nav_item.title}}</a></li>
+						{% for sub_page in nav_item.sub_pages %}
+							{% set counter = counter + 1 %}
+							{% set active = '' %}
+							{% if sub_page.url == entry.url %}{% set active = ' active' %}{% endif %}
+							<li data-counter={{counter}} class="alternate_font{{active}}"><a href="{{sub_page.url}}">{{sub_page.title}}</a></li>
+						{% endfor %}
+					</ul>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

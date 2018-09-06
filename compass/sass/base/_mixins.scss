@@ -1,0 +1,36 @@
+//Gloabl Mixins
+//compass/sass/base/_mixins.scss
+
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+//Modernizr
+@mixin yep($feature) {
+  .#{$feature} & { 
+    @content;
+  }
+}
+    
+@mixin nope($feature) {
+  .no-js &,
+  .no-#{$feature} & {
+    @content;
+  }
+}
+
+@mixin transition_all($time_in_seconds){
+     @include yep('csstransitions') {
+          @include transition-property(all);
+          @include transition-duration($time_in_seconds);
+     }
+}
+
+@function widthify($cols, $gutters)
+{
+  @return ($cols * 68) + ($gutters * 48);
+}

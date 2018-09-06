@@ -1,0 +1,32 @@
+{#
+# Table of Contents Partial for Text Page
+# 'text_page/partials/table_of_contents.html'
+#}
+
+{# First, loop through the entry's standard content and get any headers for the Table of Contents #}
+{% set toc_headings = [] %}
+{% for block in entry.modules %}
+	{% if block.type == 'heading' %}
+		{% if block.includeInTableOfContents %}
+			
+			{# Check if there is link text entered to override header text in Table of Contents #}
+			{% if block.linkText != '' %}
+				{% set link_text = block.linkText %}
+			{% else %}
+				{% set link_text = block.headingText %}
+			{% endif %}
+
+			{# Merge into headings array #}
+			{% set toc_headings = toc_headings|merge([{
+				'heading' : link_text,
+				'id' : link_text|make_id
+			}]) %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
+
+{% for heading_obj in toc_headings %}
+
+	<h2><a href="#{{heading_obj.id}}">{{heading_obj.heading}}</a></h2>
+	
+{% endfor %}

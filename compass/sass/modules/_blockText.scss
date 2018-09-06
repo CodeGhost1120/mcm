@@ -1,0 +1,26 @@
+.block_text{
+	
+	@include span(10);
+	@include push(1);
+
+	@include small(){
+		@include span(6);
+		@include push(3);
+	}
+
+	&.narrow{
+		@include span(10);
+		@include push(1);
+		@include small(){
+			@include span(7);
+			@include push(1);
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+	
+	}
+
+	strong{
+		color: $strong;
+	}
+}

@@ -1,0 +1,38 @@
+{#
+# Paginate Partial for Blog and Search Results
+# 'main/partials/_paginate.html'
+#}
+
+{# Assumes use of paginate tag #}
+
+{% if query is defined %}
+	{% set query = '?q='~query %}
+{% else %}
+	{% set query = '' %}
+{% endif %}
+{% if paginate.totalPages > 1 %}
+<div class="pagination">
+
+   	<div class="first">
+      <a class="read_more reverse" href="{{ paginate.firstUrl }}{{query}}">First</a>
+    </div>
+
+    <div class="pages">
+
+      {% for page, url in paginate.getPrevUrls(5) %}
+          <a class="main_font pagination_link" href="{{ url }}{{query}}">{{ page }}</a>
+      {% endfor %}
+
+     	<span class="main_font pagination_link current">{{ paginate.currentPage }}</span>
+
+      {% for page, url in paginate.getNextUrls(5) %}
+          <a class="main_font pagination_link" href="{{ url }}{{query}}">{{ page }}</a>
+      {% endfor %}
+      
+    </div>
+    <div class="last">
+      <a class="read_more" href="{{ paginate.lastUrl }}{{query}}">Last</a>
+    </div>
+   
+</div>
+{% endif %}

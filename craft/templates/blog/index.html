@@ -1,0 +1,46 @@
+{#
+# Blog Index Template
+# 'blog/index.html'
+#}
+
+{# Load in Text Page CSS #}
+{% includeCssFile craft.marathon.assetPath~'css/blog.css' %}
+
+{# Load in main layout to extend #}
+{% extends 'base/layout' %}
+
+{% block content %}
+	<div class="container page_title standard_content">
+		<h2>Blog</h2>
+	</div>
+
+	<div class="container">
+		<div class="blog_posts">
+			{% cache for 1 hour %}
+			{% paginate craft.entries.section('blog').limit(15) as entriesOnPage %}
+
+				{% for entry in entriesOnPage %}
+					{% set category = random(entry.blogCategories|default([''])) %}
+
+					<div class="blog_post">
+						<div class="story_heading">
+							<p class="alternate_font">{{category}}<span class='story_date'>{{entry.postDate|date('m.d.Y')}}</span></p>
+						</div>
+
+						<div class="blog_post_content standard_content">
+							<h4><a href="{{entry.url}}">{{entry.title}}</a></h4>
+							<p>{{entry.entryBlurb}}</p>
+							<p><a href="{{entry.url}}" class="read_more">Read more </a></p>
+						</div>
+
+					</div>
+				{% endfor %}
+
+				{% include 'main/partials/_paginate.html' %}
+			    
+			{% endpaginate %}
+			{% endcache %}
+		</div>
+	</div>
+	
+{% endblock %}

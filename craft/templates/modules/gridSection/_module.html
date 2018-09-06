@@ -1,0 +1,47 @@
+{#
+# Grid Partial for Standard Content Matrix
+# 'modules/grid/_module.html'
+#}
+
+{# Check which grid to display #}
+{% set grid_number = block.gridNumber %}
+
+{% switch grid_number %}
+	
+	{% case '1' %}
+		{% set grid = entry.grid1 %}
+	{% case '2' %}
+		{% set grid = entry.grid2 %}
+	{% case '3' %}
+		{% set grid = entry.grid3 %}
+	{% case '4' %}
+		{% set grid = entry.grid4 %}
+{% endswitch %}
+
+
+{% if grid|length %}
+
+<div class="grid_section">
+	<div class="grid container">
+		{% set col_count = 0 %}
+		{% for item in grid %}
+			{% set new_row = '' %}
+			{% if col_count is divisible by(12) %}
+				{% set  new_row = ' new_row' %}
+			{% endif %}
+			{% set col_count = col_count + item.columns.value %}
+			<div class="item col-{{item.columns}}{{new_row}}">
+				<a href="{{item.linkedEntry[0].url|default(item.customUrl)}}">
+					{% if item.image|length > 0 %}
+						<img src="{{item.image[0].getUrl()}}" />
+					{% endif %}
+					{% if item.caption %}
+						<p class="main_font">{{item.caption}}</p>
+					{% endif %}
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+
+{% endif %}

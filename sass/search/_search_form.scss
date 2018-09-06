@@ -1,0 +1,42 @@
+*{
+	box-sizing: border-box;
+}
+
+.search_form{
+	form{
+		.input_wrap{
+			height: 5rem;
+			margin-bottom: $gutter;
+			overflow: hidden;
+			position: relative;
+		}
+		label{
+			@include transition(all .25s ease-in-out);
+			font-size: 1.5rem;
+			position: absolute;
+			top: 3rem;
+			z-index: 500;
+		}
+		input{
+			border-bottom: 5px solid $mcm_gold;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			bottom: 0rem;
+			display: block;
+			height: 3rem;
+			font-size: 1.5rem;
+			line-height: 3rem;
+			position: absolute;
+			width: 75%;
+			z-index: 300;
+
+			&:focus{
+				outline: none;
+				& + label{
+					top: 0rem;
+				}
+			}
+		}
+	}
+}

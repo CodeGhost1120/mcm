@@ -1,0 +1,42 @@
+{#
+# Photo Section Module
+# 'modules/photoSection/_module.html'
+#}
+
+
+{% import "modules/photoSection/partials/_macro.html" as photo %}
+
+{% set types = [
+'square', 
+'square', 
+'tall',
+'wide',
+'square',
+'wide',
+'square',
+'square',
+'tall',
+'square',
+'wide',
+'square',
+'square'
+] %}
+
+<div class="photo_section">
+	<div class="photo_heading">
+		<div class="container">
+			<h4 class="alternate_font">{{block.sectionTitle}}</h4>
+		</div>
+	</div>
+	<div class="container">
+		<div class="photo_gallery">
+
+			{% for img in block.photos %}
+				{{photo.photo(img, loop.index, types[loop.index0])}}
+			{% endfor %}
+
+		</div>
+
+	</div>
+
+</div>

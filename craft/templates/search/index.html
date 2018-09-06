@@ -1,0 +1,57 @@
+{#
+# Search Landing Page Template
+# 'search/index.html'
+#}
+
+{# Load in Text Page CSS #}
+{% includeCssFile craft.marathon.assetPath~'css/blog.css' %}
+
+{% set titles = ['Search'] %}
+
+{# Load in main layout to extend #}
+{% extends 'base/layout' %}
+
+{% set query = craft.request.getParam('q') %}
+
+{% block content %}
+<div class="container">
+
+	<div class="search_form">
+		<form method="get" action="#">
+			<div class="input_wrap">
+				<input name='q' id="search" type="text" />
+				<label class="alternate_font" for="search">Search</label>
+			</div>
+		</form>
+	</div>
+
+	{% if query != '' %}
+	<div class="blog_posts">
+		{% paginate craft.entries.section(['blog', 'events', 'pages']).search(query).limit(15).order('score') as entriesOnPage %}
+
+			<div class="standard_content">
+				<p>Your search for &quot;{{query}}&quot; returned {{paginate.total}} results.</p>
+			</div>
+			{% for entry in entriesOnPage %}
+				{% set data = craft.marathon.getSearchEntryData(entry) %}
+				{% set heading = entry.level != 1 ? craft.entries.ancestorOf(entry).level(1).first() : entry.title %}
+				<div class="blog_post">
+					<div class="story_heading">
+						<p class="alternate_font">{{heading}}<span class='story_date'>{{data['date']}}</span></p>
+					</div>
+
+					<div class="blog_post_content standard_content">
+						<h4><a href="{{data['url']}}">{{data['title']}}</a></h4>
+						<p>{{data['blurb']}}</p>
+						<p><a href="{{data['url']}}" class="read_more">Read more </a></p>
+					</div>
+				</div>
+			{% endfor %}
+
+			{% include 'main/partials/_paginate.html' %}
+
+		{% endpaginate %}
+	</div>
+	{% endif %}
+</div>
+{% endblock %}

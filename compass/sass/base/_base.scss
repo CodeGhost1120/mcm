@@ -1,0 +1,19 @@
+@import "compass/reset";
+@import 'colors';
+@import 'grid/defaults';
+@import 'grid/breakpoints';
+@import 'images';
+@import 'fonts';
+@import 'font_awesome/font-awesome';
+@import 'mixins';
+
+@import 'zindex';
+
+@import 'global_classes';
+
+//Global partials
+@import 'main/navbar/navbar';
+@import 'main/navbar/navbar_desktop';
+// @import 'main/navbar';
+// @import 'main/navbar_desktop';
+@import 'main/footer';

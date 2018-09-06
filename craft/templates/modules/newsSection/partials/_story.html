@@ -1,0 +1,13 @@
+{#
+# News Story Partial for News Section Module
+# 'templates/modules/newsSection/partials/_story.html'
+#}
+
+<div class="news_story">
+	{% include 'modules/newsSection/partials/_story_heading.html' with settings %}
+	<div class="standard_content">
+		<h4>{{story.title}}</h4>
+		<p>{{story.entryBlurb}}</p>
+		<p class="no_margin"><a href="{{story.url}}" class="read_more alternate">Read more </a></p>
+	</div>
+</div>

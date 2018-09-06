@@ -1,0 +1,40 @@
+@include small(){
+	.main_nav{
+		border-bottom: $desktop_nav_border_width solid $mcm_gold;
+		height: vw($desktop_nav_height);
+		//position: relative;
+		.brand{
+			@include span(2, 2);
+			padding: ($desktop_nav_height - $desktop_inner_nav_height) / 1.5;
+			max-height: 100%;
+			h1{
+				height: 100%;
+				a{
+					background-size: contain;
+					background-position: left center;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	.mobile-menu-toggle{
+		display: none;
+	}
+}
+
+@include large(){
+	.main_nav{
+		border-bottom: vw($desktop_nav_border_width) solid $mcm_gold;
+		height: vw($desktop_nav_height);
+
+		.brand{
+			padding: (vw($desktop_nav_height) - vw($desktop_inner_nav_height)) / 1.5;
+			h1{
+				a{
+					// height: vw($desktop_inner_nav_height);
+				}
+			}
+		}
+	}
+}

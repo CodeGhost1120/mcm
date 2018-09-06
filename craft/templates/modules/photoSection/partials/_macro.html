@@ -1,0 +1,44 @@
+{#
+# Photo Macro 
+# 'modules/photoSection/partials/_macro.html'
+#}
+
+{% macro photo(img, number, type) %}
+
+
+	{% set square = {
+		mode: 'crop',
+		height: 370,
+		position: 'center-center',
+		width: 370
+	} %}
+
+	{% set wide = {
+		mode: 'crop',
+		height: 370,
+		position: 'center-center',
+		width: 832
+	} %}
+
+	{% set tall = {
+		mode: 'crop',
+		height: 836,
+		position: 'center-center',
+		width: 370
+	} %}
+
+	{% switch type %}
+		{% case 'square' %}
+			{% set thumb = square %}
+		{% case 'wide' %}
+			{% set thumb = wide %}
+		{% case 'tall' %}
+			{% set thumb = tall %}
+	{% endswitch %}
+
+
+	<div id="photo_{{number}}" class="photo {{type}}">
+		<img src="{{img.getUrl(thumb)}}" />
+	</div>
+
+{% endmacro %}

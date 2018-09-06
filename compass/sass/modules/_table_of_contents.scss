@@ -1,0 +1,30 @@
+.table_of_contents_heading{
+	margin-top: span(1);
+	h5{
+		@include span(10);
+		@include push(1);
+		@include small(){
+			@include span(12);
+			@include push(0);
+		}
+		
+		@include font_size(30, 35);
+		@include font_scale(30, 35);
+		font-weight: bold;
+		margin-bottom: gutter(12);
+	}	
+}
+.table_of_contents_wrap{
+	
+}
+.table_of_contents{
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: gutter(12);
+	width: span(10);
+
+	@include small(){
+		@include span(3);
+	}
+}

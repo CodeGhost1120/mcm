@@ -1,0 +1,87 @@
+{#
+# Main layout starter file
+# 'base/_layout.html'
+#}
+
+{% include 'base/partials/head.html' %}
+
+{# Load JS #}
+{% includeJsFile craft.marathon.assetPath~'js/vendor/jquery.min.js' %}
+{% includeJsFile craft.marathon.assetPath~'js/vendor/modernizr_dev.js' %}
+{% includeJsFile craft.marathon.assetPath~'js/vendor/velocity.js' %}
+{% includeJsFile craft.marathon.assetPath~'js/vendor/TweenMax.min.js' %}
+{% includeJsFile craft.marathon.assetPath~'js/vendor/jquery.waypoints.min.js' %}
+
+{% set body_class = craft.request.path %}
+
+{% if craft.request.path == '' %}
+	{% set body_class = 'home' %}
+{% endif %}
+
+<body class={{body_class}}>
+	<script>
+	 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	 ga('create', 'UA-72660874-1', 'auto');
+	 ga('send', 'pageview');
+
+	</script>
+
+  <script type="text/javascript"> var _mfq = _mfq || []; (function() { var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true; mf.src = "//cdn.mouseflow.com/projects/6423217e-9286-4f6a-bad1-499232a5d73f.js"; document.getElementsByTagName("head")[0].appendChild(mf); })(); </script>
+
+	{% include 'main/navbar.html' %}
+
+	{% if craft.request.isMobileBrowser %}
+		{% set mobile_class = 'mobile' %}
+	{% endif %}
+	<div id="content" class={{mobile_class|default('')}} role="main">
+	{% block content %}
+
+	{% endblock %}
+	</div><!-- #content -->
+	{% include 'base/partials/footer.html' %}
+
+
+<script type="text/javascript">
+var utag_data = {
+  page_type : "",
+  page_name : "",
+  site_section : "",
+  site_section2 : "",
+  site_section3 : "",
+  site_type : "",
+  video_name : "",
+  video_description : "",
+  page_section : "",
+  page_category : "",
+  page_subcategory : "",
+  customer_id : "",
+  customer_status : "",
+  _t_visitor_id : "",
+  id : "",
+  r : "",
+  event_target : "",
+  event_attr1 : "",
+  race_date : "",
+  race_name : "",
+  race_type : ""
+}
+</script>
+
+<script type="text/javascript">
+    (function(a,b,c,d){
+    a='//tags.tiqcdn.com/utag/silverline/marine-corps/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+</script>
+
+<!-- Begin Constant Contact Active Forms -->
+<script> var _ctct_m = "4728e19187103fa88efa2527681349e5"; </script>
+<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js<http://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js>" async defer></script>
+<!-- End Constant Contact Active Forms -->
+</body>
+</html>

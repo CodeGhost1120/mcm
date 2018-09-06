@@ -1,0 +1,18 @@
+// Event Banner Menu for Event Landing Pages
+// compass/sass/event/partials/_event_banner_menu.scss
+
+.banner_menu{
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: gutter(12);
+	width: span(10);
+	@include small(){
+		bottom: 0px;
+		margin-top: 0px;
+		position: absolute;
+		right:gutter(12);
+		width: span(3);
+		//@include span(3 last);
+	}
+}

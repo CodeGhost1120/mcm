@@ -1,0 +1,68 @@
+/*
+* Global Classes
+* 'base/_global_classes.scss'
+*/
+
+
+#content{
+	margin-top: 94px;
+	@include large(){
+		margin-top: 120px;
+	}
+}
+
+.container{
+	@include container();
+}
+
+.full{
+	@include span(12);
+}
+
+.container.module_break{
+	.break{
+		@include span(12);
+
+		display: block;
+		height: 1px;
+
+		&.full{
+			background-color: #E1E1E1;
+			// margin-top: span(1);
+			// margin-bottom: span(1);
+		}
+
+		&.half{
+			background-color: white;
+			height: 0px;
+			// margin-top: span(1);
+		}
+
+		&.no_line{
+			background-color: white;
+			margin-top: span(1);
+			margin-bottom: span(1);
+		}
+
+		&.none{
+			height: 0px;
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+	}
+}
+
+.clear{
+	@include clearfix;
+}
+
+.page_title{
+	h2{
+		@include h1;
+		@include span(12);
+	}
+}
+
+.offscreen{
+	text-indent: -10000px;
+}

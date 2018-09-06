@@ -1,0 +1,51 @@
+{#
+# Entry Module for other Modules to use
+# 'templates/modules/entry/_module.html'
+#}
+
+{% macro build(block, settings) %}
+
+
+{# Since this module is used in a few places, it takes some settings #}
+
+{# What mode and count should we display? #}
+{% set mode = settings['type'] %}
+{% set count = settings['count'] %}
+
+{% set entry_data = craft.marathon.getEntryData(block, mode, count) %}
+
+{% if entry_data %}
+	{% set blurb_text = entry_data['blurb_text'] %}
+	{% set blurb_link = entry_data['blurb_link'] %}
+	{% set blurb_link_text = entry_data['blurb_link_text'] %}
+	{% set blurb_title = entry_data['blurb_title'] %}
+	{% set image = entry_data['image'] %}
+
+	{% import 'modules/entry/_image.html' as image_macro %}
+
+
+	{% switch mode %}
+
+		{% case 'full' %}
+			<div class="entry_module">
+				{{image_macro.build(image, settings, blurb_link)}}
+				{% include 'modules/entry/_title.html' %}
+				{% include 'modules/entry/_blurb.html' %}
+			</div>
+
+		{% case 'blurb' %}
+			<div class="entry_module">
+				{% include 'modules/entry/_blurb.html' %}
+			</div>
+
+		{% case 'image' %}
+			<div class="entry_module image">
+				<a href="{{blurb_link}}">
+				{{image_macro.build(image, settings)}}
+				{% include 'modules/entry/_title.html' %}
+				</a>
+			</div>
+
+	{% endswitch %}
+{% endif %}
+{% endmacro %}

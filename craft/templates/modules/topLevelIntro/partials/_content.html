@@ -1,0 +1,21 @@
+{#
+# Top Level Intro Module - Content
+# 'templates/modules/topLevelIntro/partials/_content.html'
+#}
+
+{% set class = block.linkedEntry_2|length > 0 ? 'half' : 'full' %}
+
+<div class="top_level_intro standard_content {{class}}">
+	<div class="container">
+		{% import 'modules/entry/_module.html' as entry_macro %}
+		{% set settings = {'type' : 'full', 'class': class, 'count':1, 'entries':1, 'image_size':'wide'} %}
+		{{entry_macro.build(block, settings)}}
+
+		{% if block.linkedEntry_2|length > 0 %}
+			{% set settings = {'type' : 'full', 'count':2, 'entries':2, 'image_size':'wide'} %}
+			{{entry_macro.build(block, settings)}}
+		{% endif %}
+
+	</div>
+	<div class="border"></div>
+</div>

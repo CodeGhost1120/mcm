@@ -1,0 +1,21 @@
+.icon{
+
+
+  &.down-arrow{
+    height: 6px;
+    width: auto;
+
+    polyline{
+      fill: $mcm_gold;
+    }
+  }
+
+  &.calendar{
+    height: 100%; 
+    width: 100%;
+
+    path, rect{
+      fill: $mcm_gold;
+    }
+  }
+}

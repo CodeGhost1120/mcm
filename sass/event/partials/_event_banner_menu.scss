@@ -1,0 +1,29 @@
+/*
+* Event Banner Menu
+* 'event/partials/_event_banner_menu.scss'
+*/
+
+.banner_menu{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: $gutter;
+	width: widthify(10, 10);
+}
+
+@include small(){
+	.banner_menu{
+		bottom: 0px;
+		display: block;
+		margin-top: 0px;
+		width: widthify(3, 3);
+	}
+  
+	.short .banner_menu{
+		float: right;
+	}
+
+	.tall .banner_menu{
+		position: absolute;
+		right: 0px;
+	}
+}

@@ -1,0 +1,22 @@
+{#
+# Ad Section Module
+# 'modules/adSection/_module.html'
+#}
+
+{% import "modules/adSection/partials/_macro.html" as ad_macro %}
+
+{% set ads = craft.marathon.getAds(block) %}
+
+{% set sizes = ['small', 'small', 'large', 'small', 'small', 'medium'] %}
+
+<div class="ad_section">
+	<div class="container">
+		<div class="ad_gallery">
+			{% for ad in ads %}
+				<div class="ad {{sizes[loop.index0]}}" id="ad_{{loop.index0}}">
+					{{ad_macro.ad_image(sizes[loop.index0], ad)}}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,86 @@
+.home_logo{
+	z-index: 10000;
+}
+
+.main_nav{
+	z-index: 9990;
+}
+
+.event_nav_wrap
+{
+	z-index: 999999;
+
+	.event_menu_items{
+		z-index: 999999;
+	}
+
+	.menu_title{
+		z-index: 2;
+	}
+
+	.event_menu_items{
+		z-index: 1;
+	}
+}
+
+
+.brief_section{
+	.container{
+		z-index: 500;
+	}
+
+	.breif_content{
+		&:before, &:after{
+			z-index: 400;
+		}
+	}
+
+	.border{
+		&:before, &:after{
+			z-index: 500;
+		}
+	}
+
+
+}
+
+.granular_section{
+	.entry_module{
+		z-index: 500;
+		.granular_title{
+			h4{
+				z-index: 500;
+			}
+		}
+	}
+}
+
+@include small(){
+	.call_to_action{
+		.cta_text{
+			z-index: 900;
+		}
+
+		.cta_logo{
+			z-index: 800;
+			&:before, &:after{
+				z-index: 750;
+			}
+
+			.logo{
+				z-index: 9999;
+			}
+
+		}
+	}
+
+	.granular_section{
+		.entry_module{
+			.granular_title{
+				.title_icon{
+					z-index: 550;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,190 @@
+$cta_link_height: 2rem;
+
+//Mobile
+@media(max-width: $screen-sm-min){
+	.main_nav{
+		.call_to_action{
+			position: absolute;
+			right: 0px;
+			text-align: center;
+			text-transform: uppercase;
+			top: 0px;
+			width: 100%;
+			z-index: 2;
+
+			.cta_text{
+					color: white;
+					display: block;
+					font-size: .8rem;
+					line-height: $mobile_cta_height;
+					text-decoration: none;
+			}
+
+			&.red{
+				p{
+					background-color: $mcm_red;
+				}
+			}
+		}
+	}
+}
+
+$cta_height: 5rem;
+
+.call_to_action{
+
+	.logo{
+		width: 100%;
+		height: 120%;
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+    transition: height 150ms ease-out;
+		&.mcm{
+			background-image: url($mcm_yellow);
+		}
+
+		&.historic_half{
+			background-image: url($historic_half_yellow);
+		}
+
+		&.one_seven_seven_five{
+			background-image: url($one_seven_seven_five_yellow);
+		}
+
+		&.run_amuck{
+			background-image: url($run_amuck_yellow);
+		}
+
+		&.triathalon{
+			background-image: url($triathalon_yellow);
+		}
+
+		&.turkey_trot{
+			background-image: url($turkey_trot_yellow);
+		}
+
+    &.quantico_12k{
+        background-image: url($quantico_12k);
+    }
+
+    &.semper_five{
+        background-image: url($semper_five);
+    }
+
+    &.mcm_10{
+        background-image: url($mcm_10k);
+    }
+    &.belleau-wood{
+        background-image: url($belleau);
+    }
+	}
+}
+
+//Desktop
+@include small(){
+	.main_nav{
+		.call_to_action{
+			@include span(2,2);
+			//background-color: $mcm_red;
+			height: vw($desktop_cta_height);
+			position: relative;
+
+			&:hover{
+				a.cta_logo{
+					background-color: darken($mcm_red, 5%);
+
+					&:before, &:after{
+						background-color: darken($mcm_red, 5%);
+					}
+				}
+
+				.cta_text{
+					background-color: darken($mcm_red, 15%);
+				}
+			}
+
+
+			.cta_text{
+				display: block;
+				background-color: darken($mcm_red, 10%);
+				line-height: vw($cta_link_height);
+				height: vw($cta_link_height);
+				position: relative;
+				text-align: center;
+				color: white;
+				text-decoration: none;
+				@include transition(all .2s ease-in-out);
+			}
+
+			a.cta_logo{
+				background-color: $mcm_red;
+				display: block;
+				height: vw($desktop_cta_height - $cta_link_height);
+				position: relative;
+				padding: 5px;
+				@include transition(all .2s ease-in-out);
+
+				&:before, &:after{
+					@include transition(all .2s ease-in-out);
+					background-color: $mcm_red;
+					border-bottom: $desktop_nav_border_width solid $nav_bottom;
+					content: '';
+					display: block;
+					height: 125%;
+					position: absolute;
+					top: -30%;
+					width: 50%;
+				}
+
+				$skew: 20deg;
+				&:before{
+					left: 0;
+					transform-origin: bottom left;
+					@include transform(skewY($skew));
+					z-index: -1;
+				}
+
+				&:after{
+					right: 0;
+					transform-origin: bottom right;
+					@include transform(skewY(-$skew));
+					z-index: -1;
+
+				}
+
+				&.collapse{
+					&:before, &:after{
+						@include transform(skewY(0deg));
+					}
+
+          .logo{
+            height: 80%;
+          }
+				}
+			}
+		}
+	}
+}
+
+@include large(){
+	.main_nav{
+		.call_to_action{
+			// height: vw($desktop_cta_height);
+
+			.cta_text{
+				font-size: vw(1rem);
+				// line-height: vw($cta_link_height);
+				// height: vw($cta_link_height);
+			}
+
+			a.cta_logo{
+				// height: vw($cta_height);
+
+				&:before, &:after{
+					border-bottom: vw($desktop_nav_border_width) solid $nav_bottom;
+				}
+			}
+		}
+	}
+}

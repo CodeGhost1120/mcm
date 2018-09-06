@@ -1,0 +1,33 @@
+.table_of_contents_heading{
+	margin-top: widthify(.25, .25);
+	h5{
+		@include auto_margins;
+		@include font_size(30, 35);
+		@include font_scale(30, 35);
+		font-weight: bold;
+		margin-bottom: $gutter;
+		width: widthify(10, 9);
+	}
+}
+.table_of_contents_wrap{
+
+}
+.table_of_contents{
+	@include auto_margins;
+	margin-left: auto;
+	margin-right: auto;
+	width: widthify(10,9);
+}
+
+@include small(){
+	.table_of_contents_heading{
+		h5{
+			width: 100%;
+		}
+	}
+
+	.table_of_contents{
+		float: left;
+		width: widthify(3, 2);
+	}
+}

@@ -1,0 +1,23 @@
+.heading{
+	@include auto_margins;
+	margin-bottom: 1rem;
+	width: widthify(10, 9);
+
+	&.standard_content{
+		margin-bottom: 0rem;
+	}
+}
+
+@include small(){
+	.heading{
+		@include auto_margins;
+		width: widthify(8, 7);
+	}
+}
+
+body[class*="sponsors"], body[class^="sponsors"]{
+	.heading{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+}

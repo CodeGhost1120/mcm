@@ -1,0 +1,58 @@
+{#
+# Content section for upcoming events module
+# 'templates/modules/upcomingEventsRichText/_module.html'
+#}
+
+<section class="introduction_section events-schedule js-events-page-section" data-event="calendar">
+		    <div class="container">
+		      {% set currentEvents = craft.entries.section('events').level(1).limit(3).order('eventDate').eventDate('>=' ~ now) %}
+		      {% set pastEvents = craft.entries.section('events').level(1).limit(3).order('eventDate').eventDate('<=' ~ now) %}
+
+		      <div  class="events-table">
+		        <div class="standard_content events-table__column past">
+		          	<div class="intro_left">
+		          	<h3 class="combo_headline"><span class='accent_heading'>{{ block.accentHeading }}</span> {{ block.sectionHeading }}</h3>
+					</div>
+
+					<div class="events-schedule__footer event-schedule-homepage">
+				        <p>The MCM offers a variety of distances, challenges and unique experiences to #RunWithTheMarines throughout the year with events hosted in Arlington County, Fredericksburg, Prince William County and aboard Marine Corps Base Quantico.</p>
+
+				        <a class="square-button" href="/events">
+				          Full Calendar
+				        </a>
+				    </div>
+		        </div>
+
+
+
+		        <div class="events-table__column upcoming">
+		          <p class="events-table__heading"></p>
+
+		          <ul class="events-table__events-list">
+		            {% for event in currentEvents %}
+		            <li>
+		              <a class="events-table__item" href="{{event.url}}">
+		                <div  class="event-date">
+		                  <span class="month">{{event.eventDate|date('M')}}</span>
+		                  <span class="day">{{event.eventDate|date('d')}}</span>
+		                </div>
+		                <div class="event-info">
+		                  <p class="event-name">{{event.title}}</p>
+		                  <p class="event-location">{{event.raceLocation}}</p>
+		                </div>
+		                <div class="event-logo">
+		                  <div class="logo">
+		                    {% include '/logos/' ~ event.slug ~ '.html' %}
+		                  </div>
+		                </div>
+		              </a>
+		            </li>
+		            {% endfor %}
+		          </ul>
+		        </div>
+		      </div>
+
+
+		      
+		    </div>
+		  </section>

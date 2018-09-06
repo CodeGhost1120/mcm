@@ -1,0 +1,28 @@
+<h1>Event Section</h1>
+
+	<ul id="nav">
+    {% nav entry in craft.entries.section('events') %}
+        <li>
+           {{ entry.title }} - {{entry.url}}
+            {% ifchildren %}
+                <ul>
+                    {% children %}
+                </ul>
+            {% endifchildren %}
+        </li>
+    {% endnav %}
+	</ul>
+
+<h1>Pages Section</h1>
+	<ul id="nav">
+    {% nav entry in craft.entries.section('pages') %}
+        <li>
+           {{ entry.title }} - {{entry.url}}
+            {% ifchildren %}
+                <ul>
+                    {% children %}
+                </ul>
+            {% endifchildren %}
+        </li>
+    {% endnav %}
+	</ul>

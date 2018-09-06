@@ -1,0 +1,28 @@
+{#
+# Glance for Event Landing Pages
+# 'event/partials/_glance.html'
+#}
+
+<div class="event_glance">
+	<div class="container">
+		<div class="glance">
+			<div class="count_down_wrap">
+				<div class="count_down">
+					<p class="alternate_font">
+						<span class='numbers'>{{entry.countdownDate|date('U')|days_until}} Days</span>
+					</p>
+				</div>			
+			
+				<div class="count_down_text">
+					<p class="alternate_font">{{entry.countdownText}} <span class='main_font'>{{entry.countdownDate|date('F jS')}}</span></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="links standard_content">
+			<div class="links_wrap">
+				{% include 'main/partials/_link_list' %}
+			</div>
+		</div>
+	</div>
+</div>

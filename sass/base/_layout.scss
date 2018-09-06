@@ -1,0 +1,20 @@
+#content{
+	min-height: $content_min_height
+}
+
+@include small(){
+
+	.home #content{
+		margin-top: 0;
+	}
+
+	#content{
+		margin-top: vw($desktop_nav_height);
+	}
+}
+
+@include large(){
+	#content{
+		margin-top: vw($desktop_nav_height);
+	}
+}

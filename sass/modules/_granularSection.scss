@@ -1,0 +1,118 @@
+
+$normal_size: 46;
+$calculated: 46*100/1440 +rem;
+
+.granular_section{
+	.entry_module{
+		@include auto_margins;
+		width: widthify(10, 9);
+
+		margin-bottom: widthify(.25, .25);
+		&:last-of-type{
+			margin-bottom: 0px;
+		}
+		position: relative;
+		a{
+			color: white;
+			display: block;
+			height: 100%;
+			text-decoration: none;
+			width: 100%;
+		}
+
+		.granular_title{
+			bottom: 0px;
+			height: 46px;
+			overflow: hidden;
+			position: relative;
+			right: 0px;
+			width: 100%;
+			.title_icon{
+				display: none;
+			}
+			h4{
+				background-color: $dark_link;
+				bottom: 0px;
+				color: white;
+				font-size: 18px;
+				min-height: 46px;
+				left: 0%;
+				line-height: 46px;
+				padding-left: 1rem;
+				position: absolute;
+				width: 100%;
+			}
+		}
+
+		&:hover{
+			.granular_title{
+				h4{
+					left: 0%;
+				}
+			}
+		}
+
+		img{
+			display: block;
+			width: 100%;
+
+		}
+	}
+}
+
+@include small(){
+	.granular_section{
+		.entry_module{
+			float: left;
+			margin-left: percentage($gutter/$container_large);
+			width: widthify(3,2);
+			&:first-of-type{
+				margin-left: 0rem;
+			}
+			.granular_title{
+				position: absolute;
+				.title_icon{
+					background-color: $link;
+					background-image: url($link_arrows_white);
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: percentage(17/46) percentage(20/46);
+					display: block;
+					height: 46px;
+					position: absolute;
+					right: 0px;
+					width: 46px;
+				}
+
+				h4{
+					left: 100%;
+					height: 46px;
+					@include yep('csstransitions'){
+						@include transition-property(left);
+						//@include transition-property(color);
+						@include transition-duration(.5s);
+					}
+				}
+			}
+		}
+	}
+}
+
+@include large(){
+	.granular_section{
+		.entry_module{
+			.granular_title{
+				height: $calculated;
+				.title_icon{
+					height: $calculated;
+					width: $calculated;
+				}
+				h4{
+					font-size: 18*100/1440+rem;
+					height: $calculated;
+					line-height: $calculated;
+				}
+			}
+		}
+	}
+}

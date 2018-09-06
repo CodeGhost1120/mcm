@@ -1,0 +1,44 @@
+{#
+# Global Footer Template
+# 'main/footer/footer.html'
+#}
+
+<footer>
+	<div class="footer_wrap">
+		<div class="footer_content">
+			<div class="logo">
+				<a class="offscreen" href="{{siteUrl}}">Marine Corps Marathon</a>
+			</div>
+
+			{% set footer_items = craft.marathon.getMainNavItems('footer') %}
+
+			<div class="link_col">
+				<ul>
+					{% for item in footer_items|slice(0, 4) %}
+						<li><a class="main_font" href="{{item.url}}">{{item.title}}</a>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="link_col">
+				<ul>
+					{% for item in footer_items|slice(4, 7) %}
+						<li><a class="main_font" href="{{item.url}}">{{item.title}}</a>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="link_col">
+				<div class="social">
+					<div class="social_links">
+						<a href="https://www.facebook.com/MarineCorpsMarathon/" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="https://www.youtube.com/channel/UCXiY8HqFzXRbWd7_JyxMaYA" target="_blank"><i class="fa fa-youtube"></i></a>
+						<a href="https://twitter.com/Marine_Marathon" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.flickr.com/photos/marinecorpsmarathon" target="_blank"><i class="fa fa-flickr"></i></a>
+						<a href="https://www.instagram.com/marinecorpsmarathon/" target="_blank"><i class="fa fa-instagram"></i></a>
+					</div>
+					<p class="main_font"><a class="sponsor-link" href="http://www.nclud.com">Designed, developed, and hosted by nclud</a> – a proud sponsor of the MCM.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

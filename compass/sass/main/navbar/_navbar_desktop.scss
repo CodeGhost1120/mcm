@@ -1,0 +1,92 @@
+$nav_height: 8rem;
+
+@include small(){
+	.main_nav{
+		background-color: $nav_background;
+		border-bottom: 4px solid $nav_bottom;
+		margin-top: 0px;
+		height: $nav_height;
+		position: relative;
+	}
+
+	.search_form{
+		input{
+			display: none;
+		}
+	}
+
+	.brand{
+		// float: left;
+		// width: percentage(2/12);
+		@include span(2);
+		h1{
+			a{
+				background-position: left center;
+				display: block;
+				height: 6rem;
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	.global_nav_wrap{
+		@include span(7);
+	}
+	.call_to_action{
+		background-color: pink;
+		height: 10rem;
+		@include span(3);
+		p{
+			background-color: green;
+			color: white;
+			line-height: 2rem;
+			height: 2rem;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		a.cta_logo{
+			background-color: blue;
+			display: block;
+			height: 7rem;
+			position: relative;
+
+			&:before, &:after{
+				border-bottom: 4px solid $nav_bottom;
+				content: '';
+				position: absolute;
+				//@include transition_all(.75s);
+			}
+
+			$skew: 20deg;
+
+			&:before{
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 50%;
+				//background: #CF222B;
+				transform-origin: bottom left;
+				-webkit-transform: skewY($skew);
+				-moz-transform: skewY($skew);
+				-ms-transform: skewY($skew);
+				-o-transform: skewY($skew);
+				transform: skewY($skew);
+			}
+
+			&:after{
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 50%;
+				//background: #CF222B;
+				transform-origin: bottom right;
+				-webkit-transform: skewY(-$skew);
+				-moz-transform: skewY(-$skew);
+				-ms-transform: skewY(-$skew);
+				-o-transform: skewY(-$skew);
+				transform: skewY(-$skew);				
+			}
+		}
+	}
+}

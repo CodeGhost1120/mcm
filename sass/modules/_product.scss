@@ -1,0 +1,46 @@
+.product_module{
+
+  .product{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+
+  .product_image{
+    width: 100%;
+    height: auto;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .product_info{
+    padding-left: vw(5rem);
+    width: 100%;
+    float: left;
+  }
+  .product_description{
+    margin: 1.5rem 0rem;
+  }
+}
+
+
+@include small(){
+  .product_module{
+
+    .product_image{
+      width: 30%;
+      float: left;
+    }
+
+    .product_info{
+      width: 70%;
+      float: left;
+    }
+    .product_description{
+      margin: 1.5rem 0rem;
+    }
+  }
+}

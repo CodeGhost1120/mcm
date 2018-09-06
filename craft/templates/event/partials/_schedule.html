@@ -1,0 +1,45 @@
+{#
+# Event Schedule Partial
+# 'event/partials/_schedule.html'
+#}
+
+{% include 'modules/partials/_table_of_contents.html' %}
+
+<div class="event_schedule">
+{% for block in entry.schedule %}
+	{% if block.type == 'scheduleSectionHeading' %}
+		{# Create ID for table of contents link #}
+		{% set id = block.sectionHeading|make_id %}
+		<div class="container schedule_heading">
+			<div class="schedule_heading_wrap">
+				<h4 id="{{id}}" class="alternate_font">{{block.sectionHeading}}</h4>
+			</div>
+		</div>
+	{% else %}	
+		<div class="container schedule_item standard_content">
+			<div class="schedule_time">
+				<p>{{block.startTime|date('g:iA')}}
+				{% if block.endTime %} 
+					- {{block.endTime|date('g:iA')}}
+				{% endif %}
+				</p>
+			</div>
+			<div class="schedule_description_wrap">
+				{% set last = '' %}
+				{% if loop.last or block.next.type == 'scheduleSectionHeading' %}
+					{% set last = ' last' %}
+				{% endif %}
+				<div class="schedule_description{{ last }}">
+					<div class="icon"></div>
+					<div class="schedule_description_text">
+					{{block.description}}
+					{% if block.linkedEntry|length %}
+						<p class="schedule_link"><a class="read_more" href="{{block.linkedEntry[0].url}}" >{{block.customLinkText|default('Read more')}}</a></p>
+					{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+</div>

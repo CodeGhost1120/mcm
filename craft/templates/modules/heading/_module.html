@@ -1,0 +1,14 @@
+{#
+# Heading Partial for Standard Content Matrix
+# 'modules/heading/_module.html'
+#}
+
+{# Create ID for table of contents link #}
+{% set id = block.headingText|make_id %}
+
+{# Put heading level in opening and closing tags, and heading text in between #}
+<div class="container heading_module">
+	<div class="heading standard_content">
+		<{{block.headingLevel}} id='{{id}}'>{{block.headingText}}</{{block.headingLevel}}>
+	</div>
+</div>

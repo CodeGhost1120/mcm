@@ -1,0 +1,28 @@
+.detail_section{
+	.entry_module{
+
+		@include span(10);
+		@include push(1);
+
+		//margin-bottom: span(1);
+		&:last-of-type{
+			margin-bottom: 0px;
+		}
+
+		@include small(){
+			@include span(4);
+		}
+		img{
+			@include span(12);
+			margin-bottom: span(1);
+
+		}
+
+		h4{
+			@include h3;
+		}
+		h4, p{
+			@include span(12);
+		}
+	}
+}

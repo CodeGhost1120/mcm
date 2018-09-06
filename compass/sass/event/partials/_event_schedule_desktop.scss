@@ -1,0 +1,40 @@
+@include small(){
+	.schedule_heading{
+		.schedule_heading_wrap{
+			@include span(3);
+			h4{
+				text-align: right;
+			}
+		}
+	}
+	.schedule_time{
+		@include span(3);
+		@include push(0);
+		text-align: right;
+	}
+
+	.schedule_description_wrap{
+		@include span(7);
+		@include push(0);
+		.schedule_description{
+			border-left: 3px solid #F3F3F3;
+			padding-left: span(1);
+			.icon{
+				background-image: url($down_arrows);
+				background-repeat: no-repeat;
+				background-position: center center;
+				display: block;
+				height: 30px;
+				left: -8px;
+				position: absolute;
+				width: 14px;
+				@include large(){
+					height: 30*100/1440+vw;
+					width: 14*100/1440+vw;
+					left: -8*100/1440+vw;
+				}
+			}
+		}
+	}
+}
+

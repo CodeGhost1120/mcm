@@ -1,0 +1,39 @@
+{#
+# Menu for Banner in Event Landing Pages
+# 'event/partials/_event_banner_menu.html'
+#}
+
+{% includeJsFile craft.marathon.assetPath~'js/event/menu.js' %}
+<div class="banner_menu">
+	<ul class='alternate_font sub_menu'>
+		{# Check if there are navigation items in the entry #}
+
+    {% set level = entry.level %}
+
+
+    {% if entry.navigationItems|length %}
+      {% set navigationItems = entry.navigationItems %}
+    {% elseif level > 1 %}
+      {% set navigationItems = craft.entries.ancestorOf(entry).order('lft desc').first().navigationItems %}
+    {% else %}
+      {% set navigationItems = entry.navigationItems %}
+    {% endif %}
+
+		{% if navigationItems|length %}
+			{% for item in navigationItems %}
+				<li><a href="{{item.itemDestination[0].url}}">{{item.itemTitle}}</a></li>
+			{% endfor %}
+		{% else %}
+			{# If not, go with the defaults #}
+			{% if global_slug == 'marathon' or global_slug == 'historic-half' %}
+				{% set sponsorSlug = global_slug %}
+			{% else %}
+				{% set sponsorSlug = "event-series" %}
+			{% endif %}
+			<li><a href="{{siteUrl ~ 'results/'~global_slug}}">Results</a></li>
+			<li><a href="{{siteUrl ~ 'media/'}}">Media</a></li>
+			<li><a href="{{siteUrl ~ 'sponsors/'~sponsorSlug}}">Sponsors</a></li>
+			<li><a href="{{siteUrl ~ 'events/' ~ global_slug ~ '/registration'}}">Register</a></li>
+		{% endif %}
+	</ul>
+</div>

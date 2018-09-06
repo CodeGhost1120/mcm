@@ -1,0 +1,12 @@
+{#
+# Link List partial to use anywhere
+# 'templates/main/partials/_link_list.html'
+#}
+
+{% if entry.linkList|length %}
+	<ul class="link_list">
+	{% for link in entry.linkList %}
+		<li><a href="{{link.linkUrlOverride|default(link.linkedEntry[0].url|default('#'))}}">{{link.linkTitleOverride|default(link.linkedEntry[0].title|default('No Title!'))}}</a></li>
+	{% endfor %}
+	</ul>
+{% endif %}

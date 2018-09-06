@@ -1,0 +1,223 @@
+.photo_section{
+	background-image: url($concrete_wall);
+	background-repeat: repeat;
+	padding-bottom: span(1);
+	.photo_heading{
+		background-color: black;
+
+		h4{
+			@include span(12);
+			@include font_size(31, 35);
+			padding-bottom: gutter(12);
+			padding-top: gutter(12);
+
+			@include small(){
+				@include font_size(31,63);
+				padding: 0px;
+			}
+			@include font_scale(31,63);
+			color: white;
+			text-align: center;
+		}
+		margin-bottom: span(1);
+	}
+
+	.photo_gallery{
+		@include span(12);
+		//Height: 24 columns high + 23 gutters high
+		$height: widthify(24, 23);
+		height: $height*100/1344+vw;
+
+		overflow: hidden;
+		position: relative;
+		.photo{
+			position: absolute;
+
+			img{
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+		.square{
+			$width: widthify(4, 3);
+			$size: $width*100/1344+vw;
+			height: $size;
+			width: percentage($width/1344);
+		}
+		.wide{
+			$height: widthify(4, 3);
+			$width: widthify(8, 7);
+			height: $height * 100/1344+vw;
+			width: percentage($width/1344);
+		}
+
+		.tall{
+			$height: widthify(8, 7);
+			$width: widthify(4, 3);
+			height: $height * 100/1344+vw;
+			width: percentage($width/1344);
+		}
+
+		#photo_1{
+			left: 0vw;
+			top: 0vw;
+		}
+
+		#photo_2{
+			left: percentage(widthify(4,4)/1344);
+			top: 0vw;
+		}
+
+		#photo_3{
+			left: percentage(widthify(8,8)/1344);
+			top: 0vw;
+		}
+
+		#photo_4{
+			left: percentage(widthify(4,4)/1344);
+			top: (widthify(8,8) * 100 /1344)+vw;
+		}
+
+		#photo_5{
+			left: 0vw;
+			top: (widthify(8,8) * 100 /1344)+vw;
+		}
+
+		#photo_6{
+			left: 0vw;
+			top: (widthify(4,4) * 100 /1344)+vw;
+		}
+
+		#photo_7{
+			left: percentage(widthify(8,8)/1344);
+			top: (widthify(12,12) * 100 /1344)+vw;
+		}
+
+		#photo_8{
+			left: 0vw;
+			top: (widthify(16,16) * 100 /1344)+vw;
+		}
+
+		#photo_9{
+			left: percentage(widthify(8,8)/1344);
+			top: (widthify(16,16) * 100 /1344)+vw;
+		}
+
+		#photo_10{
+			left: percentage(widthify(4,4)/1344);
+			top: (widthify(16,16) * 100 /1344)+vw;
+		}
+
+		#photo_11{
+			left: 0vw;
+			top: (widthify(12,12) * 100 /1344)+vw;
+		}
+
+		#photo_12{
+			left: 0vw;
+			top: (widthify(20,20) * 100 /1344)+vw;
+		}
+
+		#photo_13{
+			left: percentage(widthify(4,4)/1344);
+			top: (widthify(20,20) * 100 /1344)+vw;
+		}
+
+	}
+
+	@include small(){
+		.photo_gallery{
+			//Height: 6 columns high + 5 gutters high
+			height: 648 * 100 / 1344+vw;
+
+			.square{
+				$width: widthify(2, 1);
+				$size: $width * 100/1344+vw;
+				height: $size;
+				width: percentage($width/1344);
+			}
+
+			.wide{
+				$height: widthify(2, 1);
+				$width: widthify(4, 3);
+				height: $height * 100/1344+vw;
+				width: percentage($width/1344);
+			}
+
+			.tall{
+				$height: widthify(4, 3);
+				$width: widthify(2, 1);
+				height: $height * 100/1344+vw;
+				width: percentage($width/1344);
+			}
+
+			#photo_1{
+				left: 0vw;
+				top: 0vw;
+			}
+
+			#photo_2{
+				left: percentage(widthify(2,2)/1344);
+				top: 0vw;
+			}
+
+			#photo_3{
+				left: percentage(widthify(4,4)/1344);
+				top: 0vw;
+			}
+
+			#photo_4{
+				left: percentage(widthify(6,6)/1344);
+				top: 0vw;
+			}
+
+			#photo_5{
+				left: percentage(widthify(10,10)/1344);
+				top: 0vw;
+			}
+
+			#photo_6{
+				left: 0vw;
+				top: (widthify(2,2) * 100 /1344)+vw;
+			}
+
+			#photo_7{
+				left: percentage(widthify(6,6)/1344);
+				top: (widthify(2,2) * 100 /1344)+vw;
+			}
+
+			#photo_8{
+				left: percentage(widthify(8,8)/1344);
+				top: (widthify(2,2) * 100 /1344)+vw;
+			}
+
+			#photo_9{
+				left: percentage(widthify(10,10)/1344);
+				top: (widthify(2,2) * 100 /1344)+vw;
+			}
+
+			#photo_10{
+				left: 0vw;
+				top: (widthify(4,4) * 100 /1344)+vw;
+			}
+
+			#photo_11{
+				left: percentage(widthify(2,2)/1344);
+				top: (widthify(4,4) * 100 /1344)+vw;
+			}
+
+			#photo_12{
+				left: percentage(widthify(6,6)/1344);
+				top: (widthify(4,4) * 100 /1344)+vw;
+			}
+
+			#photo_13{
+				left: percentage(widthify(8,8)/1344);
+				top: (widthify(4,4) * 100 /1344)+vw;
+			}
+		}		
+	}
+
+}

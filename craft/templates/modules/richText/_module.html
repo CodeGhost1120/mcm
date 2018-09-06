@@ -1,0 +1,39 @@
+{#
+# Rich Text Partial for Standard Content Matrix
+# 'content/partials/richText.html'
+#}
+
+{# Set up thumbs for images #}
+{% set mobile_thumb = {
+	mode: 'fit',
+	width: 768,
+	quality: 75
+} %}
+
+{% set desktop_thumb = {
+	mode: 'fit',
+	width: 1100,
+	quality: 80
+} %}
+
+
+
+<div class="rich_text_module container standard_content">
+	<div class="rich_text">
+		{# Check if there is an image #}
+		{% if block.image|length %}
+
+			{% if craft.request.isMobileBrowser() %}
+				{% set image = block.image[0].getUrl(mobile_thumb) %}
+			{% else %}
+				{% set image = block.image[0].getUrl(desktop_thumb) %}
+			{% endif %}
+			<div class="inline_image {{block.imagePosition}}">
+				<img src="{{image}}" alt="{{block.imageAltText|default(block.image[0].altText|default(''))}}">
+			</div>
+		{% endif %}
+
+		{# Print rich text #}
+		{{block.richText}}
+	</div>
+</div>

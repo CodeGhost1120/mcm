@@ -1,0 +1,173 @@
+@import "compass/css3/flexbox";
+
+.event_glance{
+	background-image: url($black_texture);
+	background-repeat: repeat;
+	padding-bottom: span(1);
+	padding-top: span(1);
+
+	.glance{
+		color: white;
+
+		.count_down_wrap{
+
+			float: none;
+		}
+		.count_down{
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: hidden;
+			width: span(12);
+			p{
+				@include font_size(55, 100);
+				@include font_scale(55, 100);
+
+				background-image: url($arrow_wrap);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: contain;
+				float: none;
+				height: auto;
+				padding-right: 23*100/1440 +vw;
+				position: relative;
+				text-align: center;
+				text-transform: uppercase;
+				width: auto;
+			}
+		}
+		.count_down_text{
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: span(1);
+			text-align: center;
+			width: span(12);
+			p{
+				@include font_size(31, 31);
+				@include font_scale(31, 31);
+				text-transform: uppercase;
+			}
+			span{
+				@include font_size(75, 75);
+				@include font_scale(75, 40);
+				font-weight: bold;
+				display: block;
+				margin-top: gutter(12)*2;
+				text-transform: none;
+			}
+
+		}
+	}
+
+	@include medium(){
+		.glance{
+			@include span(8);
+
+			.count_down_wrap{
+				float: none;
+				width: 100%;
+			}
+			
+			.count_down{
+				float: left;
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-top: 0px;
+				width: auto;
+				p{
+					padding-left: 12*100/1440 +vw;
+				}
+			}
+
+			.count_down_text{
+				float: left;
+				margin-left: span(1 of 12);
+				margin-right: 0px;
+				margin-top: 0px;
+				text-align: left;
+				width: auto;
+				p{
+					span{
+						@include font_size(85, 85);
+					}
+				}
+			}
+		}
+	}
+
+	@include large(){
+		.glance{
+			@include span(6);
+		}
+	}
+
+	.links{
+		@include span(10);
+		@include push(1);
+		margin-top: span(1);
+		
+
+		.links_wrap{
+			align-items: center;
+			display: flex;
+			height: 100%;
+			justify-content: center;
+
+			ul.link_list li {
+  				background-image: url($link_arrows);
+			    background-repeat: no-repeat;
+			    background-position: 0px center; 
+			    //background-size: percentage(12/1440) percentage(15/1440);
+			    $width: 12*100/1440+vw;
+			    $height: 16*100/1440+vw;
+			    background-size: 12px 16px;
+			    margin-bottom: gutter(12) * 2;
+			    @include medium(){
+			    	margin-bottom: 0px;
+			    }
+			    padding-left: 33px;
+			    @include large(){
+			    	background-size: $width $height;
+				    padding-left: 33*100/1440+vw; 
+			    }
+			    
+			    a{
+			    	color: inherit;
+			    	@include font_size(30, 38);
+			    	@include medium(){
+			    		@include font_size(18, 28);
+			    	}			    	
+			    	@include font_scale(18, 28);
+			    	text-decoration: none;
+			    }
+			}
+
+			@include flexbox((
+			    display: flex,
+			    justify-content: center
+			  ));
+			@include medium(){
+				@include flexbox((
+					justify-content: flex-end
+				));
+
+			}
+
+		}
+		@include medium(){
+			@include span(2);
+			
+			height: 6.94444vw;
+			margin-top: 0px;
+			.link_list{
+				float: right;
+			}
+		}
+		@include large(){
+			@include span(4);
+			border-left: 1px solid #6D6D6D;
+		}
+	
+		color: white;
+	}
+}

@@ -1,0 +1,9 @@
+{#
+# News Story Heading for News Section Module
+# 'templates/modules/newsSection/partials/_story_heading.html'
+#}
+
+<div class="story_heading">
+	<p class="alternate_font">{{settings['heading_title']|default('no')}} 
+	{% if settings['date'] == 'yes'%} <span class='story_date'>{{story.postDate|date('m.d.Y')}}</span>{% endif %}</p>
+</div>

@@ -1,0 +1,52 @@
+{#
+# Image for Entry Module
+# 'templates/modules/entry/_image.html'
+#}
+
+{# Get the image by checking for override image, then for linked entry image #}
+
+{% macro build(image, settings, link) %}
+
+{% set wide = {
+	mode: 'crop',
+	height: 336,
+	width: 648
+} %}
+
+{% set square = {
+	mode: 'crop',
+	height: 301,
+	width: 416
+} %}
+
+{% set small_square = {
+	mode: 'crop',
+	height: 246,
+	width: 300
+} %}
+
+{% switch settings['image_size'] %}
+	{% case 'wide' %}
+		{% set thumb = wide %}
+
+	{% case 'square' %}
+		{% set thumb = square %}
+
+	{% case 'small_square' %}
+		{% set thumb = small_square %}
+{% endswitch %}
+
+{% if image %}
+	{% set src = image.getUrl(thumb) %}
+{% else %}
+	{% set src = '' %}
+{% endif %}
+
+{% if settings['type'] != 'image' %}
+	<a href="{{link}}" class="image"><img src="{{src}}" /></a>
+{% else %}
+	<img class="" src="{{src}}" />
+{% endif %}
+
+
+{% endmacro %}

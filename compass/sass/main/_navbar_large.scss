@@ -1,0 +1,37 @@
+// @include large(){
+// 	.main_nav{
+// 		h1{
+// 			a{
+// 				height: 72*100/1440+vw;
+// 			}
+// 		}
+
+// 		.global_nav_wrap{
+// 			height: 72*100/1440+vw;
+// 		}
+
+// 		nav.global_nav{
+			
+// 			height: 26*100/1440+vw;
+
+// 			a.nav_link{
+// 				height: 26*100/1440+vw;
+// 				@include font_scale(26, 26);
+			
+// 				i{
+// 					height: 26*100/1440+vw;
+// 					width: 26*100/1440+vw;
+// 					$size: 23*100/1440+vw;
+// 					background-size: $size $size;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	.call_to_action{
+// 		//height: 150*100/1440+vw;
+// 		.cta_logo{
+// 			height: 117*100/1440+vw;
+// 		}
+// 	}
+// }

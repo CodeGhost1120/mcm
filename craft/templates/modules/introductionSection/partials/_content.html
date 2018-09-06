@@ -1,0 +1,15 @@
+{#
+# Content section for introduction module
+# 'templates/modules/introductionSection/partials/content.html'
+#}
+<div class="container standard_content">
+	<div class="intro_left">
+		<h3 class="combo_headline"><span class='accent_heading'>{{block.accentHeading}}</span> {{block.sectionHeading}}</h3>
+	</div>
+
+	<div class="intro_description">
+		{% import 'modules/entry/_module.html' as entry_macro %}
+		{% set settings = {'type': 'blurb', 'count':1, 'entries':1} %}
+		{{entry_macro.build(block, settings)}}
+	</div>
+</div>

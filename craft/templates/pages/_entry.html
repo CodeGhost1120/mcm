@@ -1,0 +1,43 @@
+{#
+# Pages Entry Template
+# 'pages/_entry.html'
+#}
+
+{# Load in Text Page CSS #}
+{% includeCssFile craft.marathon.assetPath~'css/text_page.css' %}
+
+{# Load in main layout to extend #}
+{% extends 'base/layout' %}
+
+{% block content %}
+
+  {% if entry.type.handle == 'eventsPage' %}
+    {% include 'pages/sub_templates/events_page.html' %}
+  {% else %}
+
+		{% if entry.modules %}
+			{% set block = entry.modules.first %}
+			{% if block.type == 'topLevelIntro' %}
+				{% set heading = block.introHeading ? block.introHeading : entry.title %}
+
+				<div class="container page_hero top_level_hero standard_content">
+					<h2 class="page_title">{{heading}}</h2>
+					<p class="page_intro alternate_font">{{entry.pageIntro}}</p>
+					{% include 'modules/'~block.type~'/_module.html' %}
+				</div>
+
+			{% else %}
+
+				<div class="container page_hero standard_content">
+					<h2 class="page_title">{{entry.title}}</h2>
+					<p class="page_intro">{{entry.pageIntro}}</p>
+					<span class="separator"></span>
+				</div>
+
+			{% endif %}
+		{% endif %}
+
+  	{% include 'pages/sub_templates/text_page.html' %}
+  {% endif %}
+
+{% endblock %}

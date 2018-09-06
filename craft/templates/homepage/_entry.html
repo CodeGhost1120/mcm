@@ -1,0 +1,105 @@
+{#
+# Homepage Entry Template
+# 'homepage/_entry.html'
+#}
+
+{# Banner Image #}
+{% set mobile_thumb = {
+	mode: 'fit',
+	width: 768,
+	quality: 75
+} %}
+
+{% set desktop_thumb = {
+	mode: 'fit',
+	width: 2100,
+	quality: 75
+} %}
+
+{% set banner_size = 'tall' %}
+{% set banner_image = entry.bannerImage.first.getUrl %}
+
+{% set bannerImageCss %}
+	.home_banner{
+		background-image:
+			linear-gradient(
+		      rgba(24, 24, 24, 0.7),
+		      rgba(24, 24, 24, 0.7)
+		    ),
+		    url({{banner_image}});
+	}
+
+	.no-cssgradients .event_banner{
+		background-image: url({{banner_image}});
+	}
+{% endset %}
+
+{# Load in Event CSS #}
+{% includeCssFile craft.marathon.assetPath~'css/event.css' %}
+{% includeCss bannerImageCss %}
+
+{# Load in main layout to extend #}
+{% extends 'base/layout' %}
+
+{% block content %}
+
+		<div class="home_banner {{banner_size}}">
+			<div class="home_logo">
+				<img src="/assets/img/logos/mcm_light.svg"/>
+			</div>
+			<div class="container">
+					<div class="home-intro">
+						<h2 class="intro-title main_font">{{entry.heading}}</h2>
+					</div>
+			</div>
+
+			<div class="js-scroll-btn home_scroll_indicator">
+				<img src="/assets/img/icons/Down-Arrow.svg"/>
+			</div>
+		</div>
+
+		{% for entry in entry.relatedEntries.limit(1) %}
+
+		<div class="home-countdown">
+			<div class="count_down_wrap">
+				<div class="count_down">
+					<p class="alternate_font">
+						<span class='numbers'>{{entry.countdownDate|date('U')|days_until}} Days</span>
+					</p>
+
+				</div>
+				<div class="count_down_text">
+					<h3 class='event-title alternate_font'>{{entry.title}}</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="event_glance">
+			<div class="container">
+				<div class="glance">
+					<div class="count_down_wrap">
+						<div class="count_down">
+							<p class="alternate_font">
+								<span class='uppercase'>The next event:</span>
+							</p>
+						</div>
+
+						<div class="count_down_text">
+							<h3 class='event-title main_font'><a href="{{entry.url}}">{{entry.title}}</a></h3>
+						</div>
+
+						{% if entry.registrationOpen | length %}
+							<a class="home_registration_btn alternate_font" href="{{entry.url}}/registration">Register</a>
+						{% else %}
+							<a class="home_registration_btn alternate_font" href="{{entry.url}}">Info</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	{% endfor %}
+
+	{% include 'modules/_homeLoader' %}
+
+{% endblock %}

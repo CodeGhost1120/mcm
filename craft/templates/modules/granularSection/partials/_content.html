@@ -1,0 +1,20 @@
+{#
+# Content partial for granular section module
+# 'templates/modules/detailSection/partials/_content.html'
+#}
+
+<div class="granular_section clear">
+	{% import 'modules/entry/_module.html' as entry_macro %}
+	{% set settings = {'type' : 'image', 'count':1, 'entries':4, 'image_size':'square'} %}
+	{{entry_macro.build(block, settings)}}
+
+	{% set settings = {'type' : 'image', 'count':2, 'entries':4, 'image_size':'square'} %}
+	{{entry_macro.build(block, settings)}}
+
+	{% set settings = {'type' : 'image', 'count':3, 'entries':4, 'image_size':'square'} %}
+	{{entry_macro.build(block, settings)}}
+
+	{% set settings = {'type' : 'image', 'count':4, 'entries':4, 'image_size':'square'} %}
+	{{entry_macro.build(block, settings)}}
+
+</div>	

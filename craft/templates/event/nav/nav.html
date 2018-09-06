@@ -1,0 +1,10 @@
+{#
+# Template Chooser for Event Nav for Event Pages
+# 'event/nav/nav.html'
+#}
+
+{% if craft.request.isMobileBrowser() %}
+	{% include 'event/nav/_mobile' %}
+{% else %}
+	{% include 'event/nav/_desktop' %}
+{% endif %}

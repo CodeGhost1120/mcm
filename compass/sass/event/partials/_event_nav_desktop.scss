@@ -1,0 +1,196 @@
+@include small()
+{
+	$nav_height: 60px;
+
+	.event_nav_wrap{
+		background-color: #26282B;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.event_nav{
+		@include span(12);
+		height: auto;
+	}
+
+	.menu_title{
+		float: left;
+		width: percentage(3/12);
+		a{
+			background-image: url($race_logo_path + 'yellow/mcm.svg');
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: auto 80%;
+			color: $mcm_gold;
+			display: block;
+			height: $nav_height;
+			text-align: right;
+			text-decoration: none;
+			width: 100%;
+			@include font_size(26, 60);
+		}
+
+		.nav_button{
+			display: none;
+		}
+	}
+
+	.event_menu_items{
+		float: left;
+		padding-left: percentage(1/12);
+		text-align: left;
+		width: percentage(9/12);
+
+		ul.shuttle_pages{
+			&>li{				
+				display: inline-block;
+				margin-right: percentage(1/36);
+				margin-left: percentage(1/36);
+				position: relative;
+				&:first-of-type{
+					margin-left: 0px;
+				}
+				&:last-of-type{
+					margin-right: 0px;
+				}
+				@include font_size(22, 60);
+				a{
+					color: #A7A8AA;
+					font-weight: bold;
+					position: relative;
+					text-decoration: none;
+					text-transform: uppercase;
+					
+				}
+				&:before{
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 5px;
+					bottom: 0;
+					left: 0;
+					background-color: $mcm_gold;
+					visibility: hidden;
+					-webkit-transform: scaleX(0);
+					transform: scaleX(0);
+					-webkit-transition: all 0.3s ease-in-out 0s;
+					transition: all 0.3s ease-in-out 0s;
+				}
+				&:hover:before{
+					visibility: visible;
+					  -webkit-transform: scaleX(1);
+					  transform: scaleX(1);
+				}
+			}
+		}
+	}
+
+	.glances{
+		float: left;
+		width: 30%;
+		p{
+			@include font_size(25, 25);
+			color: white;
+			display: none;
+			padding-top: span(1 of 12);
+		}
+	}
+
+	.sub_menu_wrap{
+		float: right;
+		overflow: hidden;
+		width: 30%;
+		.sub_pages{
+			display: none;
+			float: right;
+			width: 100%;
+			li{
+				margin-bottom: .25rem;
+				a{
+					//color: #A7A8AA;
+					color: white;
+					position: relative;
+					text-decoration: none;
+					text-transform: uppercase;
+					@include font_size(22, 22);
+				}
+			}
+		}
+	}
+}
+// @include small(){
+// 	$nav_height: 60px;
+// 	.event_nav{
+// 		//height: $nav_height;
+// 		overflow: hidden;
+// 		@include span(12);
+// 		.menu_title{
+// 			overflow: hidden;
+// 			a{
+// 				background-image: url($race_logo_path + 'yellow/mcm.svg');
+// 				background-repeat: no-repeat;
+// 				background-position: left center;
+// 				background-size: auto 80%;
+// 				text-align: right;
+// 			}
+
+// 			.nav_button{
+// 				display: none;
+// 			}
+// 		}
+
+// 		.event_menu_items{
+// 			height: auto;
+// 			left: 0%;
+// 			position: relative;
+// 			li{
+// 				a{
+// 					display: inline;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	ul.shuttle_pages{
+// 		float: right;
+// 		text-align: right;
+// 		width: 100%;
+// 		&> li{
+// 			display: inline;
+// 			margin-right: gutter(12) * 3;
+// 			&:last-of-type{
+// 				margin-right: 0px;
+// 			}
+// 			&> a{
+// 				@include font_size(22, 50);
+// 				@include font_scale(22, 50);
+// 				color: #A7A8AA;
+// 				font-weight: bold;
+// 				text-transform: uppercase;
+// 				&:hover{
+// 					color: $mcm_gold;
+// 				}
+// 			}
+
+// 			ul.sub_pages{
+// 				display: none;
+// 				&>li{
+// 					border: none;
+// 					a{
+// 						p{
+// 							display: none;
+// 						}
+// 					}
+// 					&:first-of-type{
+// 						a{
+// 							p{
+// 								display: block;
+// 								left: 0px;
+// 								position: absolute;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

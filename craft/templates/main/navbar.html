@@ -1,0 +1,48 @@
+{#
+# Global Navbar Template
+# 'main/navbar.html'
+#}
+
+{% if craft.request.isMobileBrowser %}
+	{% set mobile_class = 'mobile' %}
+{% endif %}
+
+<div class='main_nav {{mobile_class|default('')}}'>
+	<div class="container">
+		<!-- <a href="#" class="nav_expand"><span></span></a> -->
+		<div class="brand">
+			<h1><a class='offscreen' href='{{siteUrl}}'>Marine Corps Marathon</a></h1>
+			<div class="mobile-menu-toggle">
+				<span class="bar bar-1"></span>
+				<span class="bar bar-2"></span>
+				<span class="bar bar-3"></span>
+			</div>
+		</div>
+
+		{# Get nav items from globals (plugin) #}
+		{% set items = craft.marathon.getMainNavItems('globalNavigation') %}
+
+		<div class="global_nav_wrap">
+			<div class="arrows">
+				<svg version="1.1" class="arrow" x="0px" y="0px" viewBox="-299.2 385 9.5 23.2" style="enable-background:new -299.2 385 9.5 23.2; fill: #303030;" xml:space="preserve"><g id="Page-1" sketch:type="MSPage"><g id="Race-Landing-Page" transform="translate(-314.000000, -29.000000)" sketch:type="MSArtboardGroup"><g id="Group" transform="translate(238.000000, 29.000000)" sketch:type="MSLayerGroup"><path id="Fill-2-Copy-4" sketch:type="MSShapeGroup" class="st0" d="M-223.2,408.2l4.7-11.6l-4.7-11.6h4.7l4.7,11.6l-4.7,11.6 H-223.2"/></g></g></g></svg>
+			</div>
+			<nav class='global_nav'>
+				{% for item in items %}
+					{% set last = '' %}
+					{% if loop.last %}{% set last = ' last' %}{% endif %}
+					<a class="alternate_font nav_link{{last}}" href="{{item.url}}">{{item.title}}</a>
+				{% endfor %}
+					<a href="{{siteUrl}}/search" class="nav_link search_icon"><i class="fa fa-search"></i></a>
+				<!-- <a href="#" title="Search" class="nav_link offscreen search_link"><i></i></a> -->
+			</nav>
+
+		</div>
+
+
+
+		{% include 'main/partials/_call_to_action.html' %}
+
+	</div><!-- .container -->
+</div>
+
+{% includeJsFile craft.marathon.assetPath~'js/main/nav.js' %}

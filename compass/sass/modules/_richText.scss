@@ -1,0 +1,52 @@
+.rich_text{
+
+
+	@include span(10);
+	@include push(1);
+
+	.inline_image{
+		@include span(8 of 10);
+		@include push(1 of 10);
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	p:last-child{
+		margin-bottom: 0px;
+	}
+
+
+	@include small(){
+		@include span(8);
+		@include push(2);
+		.inline_image{
+			margin-bottom: gutter(12) * 2;
+			margin-top: gutter(12);
+			width: span(4 of 8);
+			img{
+				height: auto;
+				width: 100%;
+			}
+		}
+
+		.inline_image.left{	
+			margin-left: gutter(12) * 5 * -1;
+			margin-right: gutter(12) * 5;	
+			float: left;
+		}
+		.inline_image.right{
+			margin-right: gutter(12) * 5 * -1;
+			margin-left: gutter(12) * 5;	
+			float: right;
+		}
+		.inline_image.full{
+			display: block;
+			float: none;
+			margin-left: span(1) * -1;
+			width: span(10 of 8);
+		}
+
+	}	
+}

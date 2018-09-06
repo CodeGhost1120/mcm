@@ -1,0 +1,107 @@
+/*
+* Main Navbar Styles
+* 'main/navbar/_navbar.scss'
+*/
+
+$mobile_cta_height: 2rem;
+
+.main_nav{
+	background-color: $nav_background;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+
+	.container{
+		overflow: visible;
+		height: 100%;
+	}
+
+	.brand{
+		overflow: hidden;
+		padding-right: .5rem;
+		height: vw($desktop_nav_height);
+
+		h1{
+			text-align: center;
+			a{
+				background-image: url($mcm_logo_light_no_title_svg);
+				background-position: center center;
+				background-repeat: no-repeat;
+				display: block;
+			}
+		}
+	}
+}
+
+.home .main_nav{
+	position: absolute;
+	bottom: 0;
+	top: initial;
+	overflow: hidden;
+
+	.brand{
+		overflow: hidden;
+		h1{
+			display: none;
+			transform: translateY(-300px);
+			transition: all 300ms ease-out;
+		}
+	}
+
+	.call_to_action{
+		transform: translateY(-200px);
+		transition: all 300ms ease-out;
+	}
+
+	&.sticky{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: visible;
+
+		.brand{
+			h1{
+				transform: translateY(0);
+			}
+		}
+
+		.call_to_action{
+			transform: translateY(0px);
+			transition: all 300ms ease-out;
+		}
+	}
+}
+
+@media(max-width: $screen-sm-min){
+	.home .main_nav{
+		position: fixed;
+		top: 0;
+		bottom: initial;
+		left: 0;
+		width: 100%;
+		overflow: visible;
+
+		.brand{
+			h1{
+				transform: translateY(0);
+				display: block;
+			}
+		}
+
+		.call_to_action{
+			background-color: black;
+			transform: translateY(0px);
+			transition: all 300ms ease-out;
+		}
+	}
+
+	.home_logo{
+		display: none;
+	}
+}
+
+@import 'partials/nav_mobile';
+@import 'partials/nav_desktop';
+@import 'partials/nav_items';
+@import 'partials/call_to_action';

@@ -1,0 +1,25 @@
+.block_text{
+	
+	margin-left: auto;
+	margin-right: auto;
+	width: widthify(10, 10);
+
+	@include small(){
+		width: widthify(6, 6);
+	}
+
+	&.narrow{
+		@include span(10, 10);
+		margin-left: widthify(1, 1);
+		@include small(){
+			@include span(7, 7);
+			margin-left: widthify(1, 1);
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+	}
+
+	strong{
+		color: $strong;
+	}
+}

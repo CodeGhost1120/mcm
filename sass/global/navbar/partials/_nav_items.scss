@@ -1,0 +1,125 @@
+/*
+* Global Nav Nav Items
+* 'main/navbar/partials/_nav_items.scss'
+*/
+
+// MOBILE
+@media(max-width: $screen-sm-min){
+
+	.main_nav{
+		.global_nav_wrap{
+			background-color: rgba(0, 0, 0, .9);
+		}
+
+		.arrows{
+			display: none;
+		}
+
+		.search_form{
+			display: none;
+		}
+	}
+
+	nav.global_nav{
+		height: 100vh;
+		a{
+			text-decoration: none;
+			&.nav_link{
+				background-color: rgb(51,51,51);
+				color: #FFFFFF;
+				display: block;
+				line-height: 3.125rem;
+				font-size: 2rem;
+				height: 3.125rem;
+				text-align: center;
+			}
+		}
+	}
+
+	.global_nav_wrap{
+		position: absolute;
+		top: 70px;
+		left: 0;
+		width: 100%;
+		transform: translateY(-200vh);
+		z-index: 1;
+	}
+}
+
+// DESKTOP
+@include small{
+	.main_nav{
+		.arrow{
+			height: $nav_arrow_height;
+			float: left;
+			width: vw($nav_arrow_width);
+			// height: .75rem;
+			position: relative;
+			// top: .3rem;
+
+			.arrow{
+				float: left;
+				height: 100%;
+				// width: .5rem;
+				width: vw($nav_arrow_width);
+			}
+
+		}
+		.global_nav_wrap{
+			padding: 0 .5rem;
+			@include span(8,7);
+			height: vw($desktop_inner_nav_height);
+			position: relative;
+			top: vw(($desktop_nav_height - $desktop_inner_nav_height) / 2);
+		}
+
+		nav.global_nav{
+			bottom: 0px;
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			a{
+				//@include font_size(26, 26);
+				font-size: 2vw;
+				color: white;
+				margin-right: percentage($gutter/$container_large);
+				text-decoration: none;
+        transition: color 150ms ease-out;
+				&:hover{
+					color: $mcm_red;
+				}
+				&:last-of-type{
+					margin-right: 0px;
+				}
+			}
+
+			.search_icon{
+				position: relative;
+				top: -1px;
+			}
+
+			.fa-search{
+				@include font_scale(22, 22);
+			}
+		}
+	}
+}
+
+@include large(){
+	.main_nav{
+		.arrows{
+			// height: .75rem;
+			height: vw($nav_arrow_height);
+			// .arrow{
+			// 	width: .5rem;
+			// }
+		}
+		.global_nav_wrap{
+			// $top: vw($desktop_nav_height - $desktop_inner_nav_height);
+			// $top: $top / 2;
+			// height: vw($desktop_inner_nav_height);
+			//top: $top;
+			top: 1vw;
+		}
+	}
+}

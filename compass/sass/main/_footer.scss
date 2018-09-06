@@ -1,0 +1,117 @@
+footer{
+	background-color: $footer_background;
+	margin-top: gutter(12)*3;
+	overflow: hidden;
+	.footer_wrap{
+		@include span(12);
+	}
+
+
+
+}
+
+
+@include small(){
+	.footer_content{
+		color: white;
+		padding-bottom: 64px;
+		padding-top: 64px;
+		overflow: hidden;
+	
+		.logo{
+			float: left;
+			width: percentage(3/12);
+			a{
+				background-image: url($mcm_logo_light_svg);
+				background-position: center center;
+				background-repeat: no-repeat;
+				display: block;
+				height: 126px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 55%;
+			}
+		}
+
+		.link_col{
+			float: left;
+			width: percentage(3/12);
+			ul, div.social{
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			div.social{
+				height: 126px;
+				position: relative;
+				width: 80%;
+				.social_links{
+					text-align: center;
+					a{
+						border-bottom: 4px solid #A7A8AA;
+						padding-left: 8px;
+						padding-right: 8px;
+						width: 20%;
+						@include font_size(30, 30);
+						@include font_scale(30, 30);
+						&:hover{
+							border-color: $mcm_red;
+							color: $mcm_red;
+						}
+					}
+				}
+				
+				
+
+				p{
+					bottom: 0px;
+					color: #A7A8AA;
+					position: absolute;
+					@include font_size(14, 16);
+					@include font_scale(14, 16);
+					a{
+						color: white;
+						font-weight: bold;
+						text-decoration: none;
+					}
+				}
+				
+			}
+
+			a{
+				color: #A7A8AA;
+			}
+			ul{
+				width: 55%;	
+				li{
+					margin-bottom: 18px;
+					&:last-of-type{
+						margin-bottom: 0px;
+					}
+				}
+				a{
+					text-decoration: none;
+					@include font_size(18, 18);
+					@include font_scale(18, 18);
+				}
+			}
+		}
+	}
+}
+
+@include large(){
+
+	.footer_content{
+		.logo {
+			a{
+				height: 126*100/1440 + vw;
+			}
+		}
+
+		.link_col{
+			div.social{
+				height: 126*100/1440 + vw;
+			}
+		}
+	}
+}

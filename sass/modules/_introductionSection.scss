@@ -1,0 +1,91 @@
+/*
+* Introduction Section Module
+* 'modules/_introductionSection.scss'
+*/
+
+.introduction_section{
+	padding-bottom: 2rem;
+	.heading_photo{
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: block;
+		height: 14.72vw;
+		margin-bottom: $gutter;
+		position: relative;
+	}
+	.container{
+		.svg_wrap{
+			bottom: -1px;
+			height: 3.6vw;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			.mobile{
+				display: block;
+			}
+			.large{
+				display: none;
+			}
+		}
+	}
+
+	.intro_left{
+		width: 100%;
+
+		h3{
+			@include h2;
+			margin-bottom: 1.5rem;
+      		line-height: auto;
+		}
+	}
+	.intro_description{
+		float: left;
+		margin-left: widthify(1, 0);
+		width: widthify(10,9);
+	}
+}
+
+@include small(){
+	.introduction_section{
+
+		.heading_photo{
+			margin-bottom: $gutter * 2;
+		}
+		.intro_left{
+			float: left;
+			width: widthify(5,4);
+
+			h3{
+        margin-bottom: 0;
+        line-height: 4.5vw;
+			}
+
+      .accent_heading{
+        margin-bottom: -1vw;
+      }
+		}
+
+		.read_more{
+			display: none;
+		}
+
+		.container{
+			.svg_wrap{
+				.mobile{
+					display: none;
+				}
+
+				.large{
+					display: block;
+				}
+			}
+		}
+
+		.intro_description{
+			float: right;
+			margin-left: widthify(1, 0);
+			width: widthify(6,5);
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{#
+# News Section Module
+# 'templates/modules/newsSection/_module.html'
+#}
+
+{# Get related blog posts #}
+{% set stories = craft.entries.section('blog').relatedTo(block.searchWithAndOrOr, block.relatedEntries).limit(3) %}
+{% set featured_image = random(stories) %}
+
+{% set thumb = {
+	mode: 'crop',
+	width: 416,
+	height: 233
+} %}
+
+{% set featured_image = featured_image.featureImage.first().getUrl(thumb)|default('') %}
+<div class="news_section">
+	<div class="container">
+		<div class="news_wrap">
+			<div class="latest">
+				{% for story in stories|slice(0,2) %}
+					{% set category = random(story.blogCategories|default([''])) %}
+					{% set settings = {'heading_title' : category, 'date':'yes'} %}
+					{% include 'modules/newsSection/partials/_story.html' %}
+				{% endfor %}
+			</div>
+			<div class="other_posts">
+				{% for story in stories|slice(2,1) %}
+					{% set category = random(story.blogCategories|default([''])) %}
+					{% set settings = {'heading_title' : category, 'date':'yes'} %}
+					{% include 'modules/newsSection/partials/_story.html' %}
+				{% endfor %}
+
+				<div class="all_posts">
+					<img src="{{featured_image}}" />
+					<p><a class="main_font" href="{{siteUrl('blog')}}">View all posts<span class='arrow_icon'></span></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

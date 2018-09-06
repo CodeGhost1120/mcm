@@ -1,0 +1,23 @@
+{#
+# Text Page Entry Template
+# 'event/_entry.html'
+#}
+
+{# Load in Text Page CSS #}
+{% includeCssFile craft.marathon.assetPath~'css/text_page.css' %}
+
+{# Load in main layout to extend #}
+{% extends 'base/layout' %}
+
+{% block content %}
+
+	<div class="container page_title standard_content">
+		<h2>{{entry.title}}</h2>
+	</div>
+
+
+	{# Load in Modules #}
+	{% include 'modules/partials/_table_of_contents.html' %}
+	{% include 'modules/_loader' %}
+
+{% endblock %}

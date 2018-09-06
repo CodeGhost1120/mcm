@@ -1,0 +1,13 @@
+// Event Landing Page Styles
+// compass/sass/event/event.scss
+
+@import 'base/base';
+
+//Partials
+@import 'event/partials/event_banner';
+@import 'event/partials/event_nav';
+@import 'event/partials/event_nav_desktop';
+@import 'event/partials/_event_glance';
+@import 'modules/modules';
+@import 'event/partials/_event_schedule';
+@import 'partials/grid_section';

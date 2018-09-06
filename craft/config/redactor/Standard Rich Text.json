@@ -1,0 +1,23 @@
+{
+	buttons: ['formatting','bold','italic','unorderedlist','orderedlist','link','table', ''],
+	plugins: ['fullscreen','table'],
+	formatting: ['p', 'h1', 'h2', 'h3', 'h4', 'h5'],
+  formattingAdd: [
+    {
+      tag: 'p',
+      title: "Button",
+      class: "button"
+    },
+    {
+      tag: 'p',
+      title: "External Button",
+      class: "external-button button"
+    },
+    {
+      tag: 'p',
+      title: "Download Button",
+      class: "download-button button"
+    }
+  ],
+	toolbarFixed: true
+}

@@ -1,0 +1,366 @@
+/*
+* Font Declarations
+* 'compass/sass/base/_fonts.scss'
+*/
+
+$base-font-size: 16;
+$font-path: 'http://mcm.craft.dev/assets/fonts/';
+//$font-path: 'http://mcm.nclud.com/assets/fonts/';
+
+$roboto: 'Roboto', sans-serif;
+$unica: 'Unica One', cursive;
+$cool: 'Cool', sans-serif;
+
+$scale_base: 1440;
+
+
+@mixin main_font(){
+	font-family: $roboto;
+}
+.main_font{
+	@include main_font;
+}
+
+@mixin alternate_font(){
+	font-family: $unica;
+}
+
+.alternate_font{
+	@include alternate_font;
+	text-transform: uppercase;
+}
+
+@mixin accent_font(){
+	font-family: $cool;
+	//font-family: "flood-std",sans-serif;
+	//letter-spacing: -0.125em;
+}
+
+.accent_font{
+	@include accent_font;
+	//letter-spacing: -0.125em;
+}
+
+@mixin font_size($font_size, $line_height)
+{
+	font-size: $font_size/$base-font-size+rem;
+	line-height: $line_height/$base-font-size+rem;
+}
+
+@mixin font_scale($font_size, $line_height)
+{
+	@include large(){
+		font-size: $font_size*100/$scale_base+vw;
+		line-height: $line_height*100/$scale_base+vw;
+	}
+}
+
+// ********************
+// Standard Font Styles
+// ********************
+
+html{
+	font-size: $base-font-size+px;
+}
+
+$paragraph_line_height: 1.750vw;
+
+@mixin h1(){
+	$font_size: 85;
+	$line_height: 94;
+
+	@include font_size($font_size - (.2*$font_size), $line_height - (.2*$line_height));
+	@include small(){
+		@include font_size($font_size - (.15*$font_size), $line_height - (.15*$line_height));
+	}
+	@include medium(){
+		@include font_size($font_size - (.10*$font_size), $line_height - (.10*$line_height));
+	}
+
+	@include font_scale($font_size, $line_height);
+}
+
+@mixin h2(){
+	$font_size: 65;
+	$line_height: 80;
+	@include font_size($font_size - (.2*$font_size), $line_height - (.2*$line_height));
+	@include small(){
+		@include font_size($font_size - (.15*$font_size), $line_height - (.15*$line_height));
+	}
+	@include medium(){
+		@include font_size($font_size - (.10*$font_size), $line_height - (.10*$line_height));
+	}
+
+	@include font_scale($font_size, $line_height);
+
+}
+
+@mixin h3(){
+	$font_size: 39;
+	$line_height: 45;
+
+	@include font_size($font_size - (.2*$font_size), $line_height - (.2*$line_height));
+	@include small(){
+		@include font_size($font_size - (.15*$font_size), $line_height - (.15*$line_height));
+	}
+	@include medium(){
+		@include font_size($font_size - (.10*$font_size), $line_height - (.10*$line_height));
+	}
+
+	@include font_scale($font_size, $line_height);
+
+}
+
+@mixin h4(){
+	@include font_size(30, 35);
+	@include font_scale(30, 35);
+}
+
+@mixin p(){
+	@include main_font;
+	margin-bottom: 1rem;
+	@include large(){
+		margin-bottom: 1vw;
+	}
+
+	@include font_size(18,28);
+	@include font_scale(18, 28);
+	&.no_margin{
+		margin: 0px;
+	}
+}
+
+@mixin a(){
+	color: $link;
+	font-family: inherit;
+	text-decoration: underline;
+}
+
+.standard_content{
+
+	@include main_font;
+
+	h1, h2, h3, h4, h5, h6{
+		&:not(.sub_heading){
+			@include main_font;
+			font-weight: 700;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	h1{
+		@include h1;
+	}
+
+	h2{
+		@include h2;
+	}
+
+	h3{
+		@include h3;
+	}
+
+	h4, h5, h6{
+		@include h4;
+	}
+
+	p{
+		@include p;
+	}
+
+	a:not(.read_more){
+		@include a;
+		transition: color 150ms ease-out;
+
+		&:hover{
+			color: darken($mcm_red, 20%);
+		}
+	}
+
+	.btn{
+		&.primary-btn{
+			background-color: $mcm_red;
+			padding: 1rem 2rem;
+			color: white;
+			text-decoration: none;
+			display: inline-block;
+			transition: background-color 150ms ease-out;
+
+			&:hover{
+				background-color: darken($mcm_red, 10%);
+				color: white;
+			}
+		}
+	}
+
+	ol{
+		counter-reset: item;
+		list-style-type: decimal;
+		margin-bottom: 1rem;
+		li{
+			display: block;
+			&:before{
+				color: $link;
+				content: counter(item) ". ";
+				counter-increment: item;
+			}
+		}
+	}
+
+	li{
+		@include font_size(16, 25);
+  	@include font_scale(16, 25);
+	}
+
+	strong{
+		font-weight: bold;
+	}
+
+	em{
+		font-style: italic;
+	}
+
+	table{
+		@include font_size(18,28);
+		@include font_scale(18, 28);
+		margin-bottom: 1rem;
+		width: 100%;
+		th{
+			font-weight: bold;
+		}
+
+		td, th{
+			padding: $gutter/4;
+		}
+
+		tr:nth-child(odd){
+			background-color: #F5F5F5;
+		}
+	}
+	table, tr, td{
+		border: 1px solid black;
+	}
+
+	.accent_heading{
+		@include accent_font;
+		color: $accent;
+		display:block;
+		font-size: .9em;
+		font-weight: normal;
+		//margin-bottom: .1em;
+		text-align: center;
+	}
+
+	.combo_headline{
+		text-align: center;
+		.accent_heading{
+			margin-bottom: -0.4em;
+		}
+	}
+
+	.block_text{
+		p{
+			$font_size: 26;
+			$line_height: 36;
+
+			@include font_size($font_size, $line_height);
+			@include font_scale($font_size, $line_height);
+		}
+	}
+
+	ul {
+	    list-style-type: none;
+	    padding: 0px;
+	    margin-bottom: 1rem;
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    margin-top: 0px;
+
+	}
+	ul li {
+		@include font_size(16, 25);
+  	@include font_scale(16, 25);
+		background-image: url($link_arrows);
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+    color: inherit;
+		padding-left: 1.25rem;
+		margin-left: -1.25rem;
+    $width: 12*100/1440+vw;
+    $height: 16*100/1440+vw;
+    background-size: 12px 16px;
+		// margin-bottom: gutter(12) * 2;
+    @include medium(){
+    	margin-bottom: 5px;
+    }
+    @include large(){
+    	background-size: $width $height;
+    }
+	}
+
+
+}
+
+.sub_heading{
+	font-size: 1.938rem;
+	font-weight: 300;
+	line-height: 2.250rem;
+	@include large(){
+		font-size: 1.938vw;
+		line-height: 2.250vw;
+	}
+	text-transform: uppercase;
+}
+
+.read_more{
+	@include main_font;
+	@include font_size(18, 28);
+	@include font_scale(18, 28);
+  transition: all 150ms ease-out;
+	color: black;
+
+	&.alternate{
+		color: white;
+	}
+
+	background-image: url($link_arrows);
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: 12px 15px;
+	font-weight: bold;
+	padding-right: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	&.reverse{
+		background-image: url($link_arrows_reverse);
+		background-position: center left;
+		padding-left: 16px;
+		padding-right: 0px;
+		@include large(){
+			padding-left: 16*100/1440+vw;
+			padding-right: 0px;
+		}
+	}
+	@include large(){
+		$width: 12*100/1440+vw;
+		$height: 15*100/1440+vw;
+		background-size: $width $height;
+		padding-right: 16*100/1440+vw;
+	}
+	span{
+		color: $link;
+	}
+	&:hover{
+		color: $link;
+	}
+}
+
+
+.screen-reader-text{
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}

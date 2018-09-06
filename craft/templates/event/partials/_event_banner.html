@@ -1,0 +1,70 @@
+{#
+# Banner for Event Landing Page
+# 'events/partials/_event_banner.html'
+#}
+
+{# Banner Image #}
+{% set mobile_thumb = {
+	mode: 'fit',
+	width: 768,
+	quality: 75
+} %}
+
+{% set desktop_thumb = {
+	mode: 'fit',
+	width: 2100,
+	quality: 75
+} %}
+
+{# Check if this entry is a top level. If not, get the top most level image #}
+{% if entry.level == 1 %}
+	{% set banner_image = entry.bannerImage.first %}
+	{% set banner_size = 'tall' %}
+	{% set global_slug = entry.slug %}
+{% else %}
+	{% set parent_entry = craft.entries.ancestorOf(entry).level(1).first %}
+	{% set banner_image = parent_entry.bannerImage.first %}
+	{% set banner_size = 'short' %}
+	{% set global_slug = parent_entry.slug %}
+{% endif %}
+
+{% if craft.request.isMobileBrowser() %}
+	{% set banner_image = banner_image.getUrl(mobile_thumb)|default('') %}
+{% else %}
+	{% set banner_image = banner_image.getUrl(desktop_thumb)|default('') %}
+{% endif %}
+
+
+{% set bannerImageCss %}
+	.event_banner{
+		background-image: 
+			linear-gradient(
+		      rgba(24, 24, 24, 0.7), 	
+		      rgba(24, 24, 24, 0.7)
+		    ),
+		    url({{banner_image}});
+	}
+
+	.no-cssgradients .event_banner{
+		background-image: url({{banner_image}});
+	}
+{% endset %}
+{% includeCss bannerImageCss %}
+<div class="event_banner {{banner_size}}">
+	<div class="container">
+		<div class="heading_wrap">
+			{# Get accent heading and section heading from entry #}
+			<h2 class="main_font"><span class='banner_accent_heading accent_font'>{{entry.accentHeading}}</span> {{entry.sectionHeading}}</h2>
+
+			{# If this entry is level 1, show description #}
+			{% if entry.level == 1 %}
+			<div class="introduction standard_content">
+				<p class="main_font">{{entry.introduction|default('')}}</p>
+			</div>
+			{% endif %}
+		</div><!-- .heading_wrap -->
+
+		{% include 'event/partials/_event_banner_menu.html' %}
+
+	</div><!-- .container -->
+</div><!-- .event_banner -->

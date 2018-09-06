@@ -1,0 +1,21 @@
+{#
+# Global Navbar Calls to Action Partial
+# 'main/partials/_call_to_action.html'
+#}
+
+{# From the globals, get the calls to action and pull a random one #}
+
+{% set call_to_action = random(globalNavigation.callToAction) %}
+
+{% set color_class = call_to_action.color %}
+{% set cta_logo = call_to_action.raceLogo %}
+
+
+{% set cta_link = call_to_action.customUrl %}
+
+<div class="call_to_action {{color_class}}">
+	<a class="alternate_font cta_text" href="{{cta_link}}">{{call_to_action.text}}</a>
+	<a href="{{cta_link}}" class="cta_logo">
+		<div class="logo {{cta_logo}}"></div>
+	</a>
+</div>

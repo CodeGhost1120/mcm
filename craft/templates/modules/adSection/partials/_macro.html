@@ -1,0 +1,22 @@
+{#
+# Ad Macro 
+# 'modules/adSection/partials/_macro.html'
+#}
+
+{% macro ad_image(type, this_ad) %}
+
+	{% switch type %}
+		{% case 'small' %}
+			{% set image = this_ad.smallAd %}
+
+		{% case 'medium' %}
+			{% set image = this_ad.mediumAd %}
+
+		{% case 'large' %}
+			{% set image = this_ad.largeAd %}
+
+	{% endswitch %}
+    <a href="{{this_ad['url']}}">
+		<img src="{{image}}" />
+	</a>
+{% endmacro %}

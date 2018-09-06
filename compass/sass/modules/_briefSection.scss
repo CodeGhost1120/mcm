@@ -1,0 +1,165 @@
+.brief_section{
+	//margin-bottom: span(1);
+	.read_more{
+		color: white;
+		&:hover{
+			color: $link;
+		}
+	}
+
+	.heading_photo{
+		background-color: red;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 4vw;
+		padding-bottom: 5vw;
+		width: 100vw;
+		
+		h3, h4{
+			color: white;
+			text-align: center;
+		}
+		h3{
+			@include h2;
+		}
+		h4{
+			@include h3;
+		}
+	}
+
+	.container{
+		position: relative;
+	}
+
+	.brief_content{
+		position: relative;
+		top: -3.5vw;
+		padding: 12px;
+		margin-bottom: 6px;
+		//height: 70.347vw - 18.95vw;
+		width: 100vw;
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 50%;
+			background-image: url($black_texture);
+			background-repeat: repeat;
+			-webkit-transform: skew(0deg, 8deg);
+			-moz-transform: skew(0deg, 8deg);
+			-ms-transform: skew(0deg, 8deg);
+			-o-transform: skew(0deg, 8deg);
+			transform: skew(0deg, 8deg);
+
+		}
+
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 50%;
+			background-image: url($black_texture);
+			background-repeat: repeat;
+			-webkit-transform: skew(0deg, -8deg);
+			-moz-transform: skew(0deg, -8deg);
+			-ms-transform: skew(0deg, -8deg);
+			-o-transform: skew(0deg, -8deg);
+			transform: skew(0deg, -8deg);
+		}
+	}
+
+	.brief_content_internal{
+		padding-bottom: span(1.5);
+		padding-top: span(1.5);
+		
+		.entry_module{
+				
+			@include span(10);
+			@include push(1);
+
+			margin-bottom: span(1);
+			&:last-of-type{
+				margin-bottom: 0px;
+			}
+
+			img{
+				margin-bottom: span(1);
+			}
+
+			h4{
+				@include h3;
+			}
+
+			p, h4{
+				color: white;
+			}
+
+			img{
+				@include span(12);
+			}
+			p, h4{
+				@include span(12);
+			}
+
+			@include medium(){
+				margin-bottom: 0px;
+				@include span(6);
+				img{
+					@include span(12);
+					height: 23.3vw;
+				}
+				p{
+					@include span(12);
+				}
+
+				&:last-of-type{
+					@include span(6 last);
+				}
+			}
+		}
+	}
+
+	.border{
+		position: absolute;
+		bottom: 10px;
+		left: 0px;
+		height: 4px;
+		width: 100vw;
+
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height:4px;
+			width: 50%;
+			background-color: $accent;
+			-webkit-transform: skew(0deg, 8deg);
+			-moz-transform: skew(0deg, 8deg);
+			-ms-transform: skew(0deg, 8deg);
+			-o-transform: skew(0deg, 8deg);
+			transform: skew(0deg, 8deg);
+		}
+
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 4px;
+			width: 50%;
+			background-color: $accent;
+			-webkit-transform: skew(0deg, -8deg);
+			-moz-transform: skew(0deg, -8deg);
+			-ms-transform: skew(0deg, -8deg);
+			-o-transform: skew(0deg, -8deg);
+			transform: skew(0deg, -8deg);
+		}
+	}
+}

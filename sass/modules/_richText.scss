@@ -1,0 +1,88 @@
+.rich_text{
+	@include auto_margins;
+	width: widthify(10, 9);
+
+	.inline_image{
+		width: widthify(8, 7);
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	p:last-child{
+		margin-bottom: 0px;
+	}
+
+  h3:not(.sub_heading){
+    margin: 2.5rem 0 1rem;
+  }
+}
+
+.redactor-editor .button {
+  a{
+    display: block;
+    background-color: $mcm_red;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: all 150ms ease-out;
+
+    &:hover{
+      color: white;
+      background-color: darken($mcm_red, 10%);
+    }
+  }
+}
+
+@include small(){
+	.rich_text{
+		@include auto_margins;
+		width: widthify(8, 7);
+
+		.inline_image{
+			margin-bottom: $gutter;
+			// margin-top: $gutter;
+			width: 50%;
+			img{
+				height: auto;
+				width: 100%;
+			}
+
+      &.center{
+        @include auto_margins;
+      }
+
+      &.left{
+        width: 100%;
+        text-align: left;
+
+        img{
+          width: 50%;
+        }
+      }
+
+			&.drop-left{
+				float: left;
+				margin-left: $gutter * 2 * -1;
+				margin-right: $gutter * 2;
+			}
+
+			&.drop-right, &.right{
+				float: right;
+				margin-left: $gutter * 2;
+				margin-right: $gutter * 2 * 1;
+			}
+
+			&.full{
+				display: block;
+				float: none;
+				// margin-left: widthify(1, 1) * -1;
+				// width: 125%;
+        width: 100%;
+			}
+		}
+
+	}
+}

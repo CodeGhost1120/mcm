@@ -1,0 +1,25 @@
+{#
+# Block Text Modules
+# 'modules/blockText/_module.html'
+#}
+
+{# Check if this block is the first block text #}
+{# If it is, and there is a table of contents, style accordingly #}
+
+{% set headings = entry.modules.type('heading').includeInTableOfContents('not 0') %}
+
+{% if headings|length %}
+	{% if block.sortOrder != 1 or entry.type == 'schedulePage' %} 
+		<div class="container standard_content">
+			<div class="block_text">
+				{{block.blockText}}
+			</div>	
+		</div>
+	{% endif %}
+{% else %}
+	<div class="container standard_content">
+		<div class="block_text">
+			{{block.blockText}}
+		</div>	
+	</div>
+{% endif %}

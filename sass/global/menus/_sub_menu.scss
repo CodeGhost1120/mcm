@@ -1,0 +1,83 @@
+/*
+* Sub Menu (Table of Contents, Banner Menu)
+* 'global/menus/_sub_menu.scss'
+*/
+
+ul.sub_menu{
+
+	position: relative;
+
+	.banner_menu &{
+		bottom: 0rem;
+		right: 0rem;
+		li{
+			a{
+				font-size: 1.625rem;
+				height: 2.625rem;
+				line-height: 2.625rem;
+			}
+		}
+	}
+
+
+	.table_of_contents &{
+		li{
+			a{
+				font-size: 1.375rem;
+				height: 2.625rem;
+				line-height: 2.625rem;
+			}
+		}
+	}
+
+	li{
+		margin-bottom: 1rem;
+		a{
+			background-color: black;
+			display: block;
+			color: white;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			@include yep('csstransitions'){
+				@include transition-property(padding, color);
+				@include transition-duration(.1s);
+			}
+
+			&:hover, &:focus, &:active{
+				color: $accent;
+				padding-left: 2rem;
+			}
+		}
+
+		&:last-of-type{
+			margin-bottom: 0rem;
+		}
+	}
+}
+
+@include large(){
+	ul.sub_menu{
+		.banner_menu &{
+			li{
+				a{
+					font-size: vw(1.625rem);
+					height: vw(2.625rem);
+					line-height: vw(2.625rem);
+				}
+			}
+		}
+
+		.table_of_contents &{
+			li{
+				a{
+					font-size: 1.375vw;
+					height: vw(2.625rem);
+					line-height: vw(2.625rem);
+				}
+			}
+		}
+	}
+}

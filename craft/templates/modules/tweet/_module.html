@@ -1,0 +1,9 @@
+{#
+# Tweet Partial for Content Matrix
+# 'content/tweet.html'
+#}
+
+{% macro show(tweet_url) %}
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="{{tweet_url}}"></a></blockquote>
+{% includeJsFile 'https://platform.twitter.com/widgets.js' %}
+{% endmacro %}

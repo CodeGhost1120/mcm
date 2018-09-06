@@ -1,0 +1,30 @@
+{#
+# Event Entry Template for Choosing sub template
+# 'event/_entry.html'
+#}
+
+{# Load in Event CSS #}
+{% includeCssFile craft.marathon.assetPath~'css/event.css' %}
+
+{# Load in main layout to extend #}
+{% extends 'base/layout' %}
+
+{% block content %}
+	{# Check which entry type we're dealing with and load the correct sub template #}
+	{% switch entry.type %}
+
+		{% case "eventLandingPage" %}
+			{% include 'event/sub_templates/event_landing_page.html' %}
+
+		{% case "gridPage" %}
+			{% include 'event/sub_templates/text_page.html' %}
+
+		 {% case "schedulePage" %}
+		 	{% include 'event/sub_templates/schedule_page.html' %}
+
+		 {% case "textPage" %}
+		 	{% include 'event/sub_templates/text_page.html' %}
+
+	{% endswitch %}
+
+{% endblock %}

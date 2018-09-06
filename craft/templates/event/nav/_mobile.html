@@ -1,0 +1,45 @@
+{#
+# Mobile Event Nav for Event Pages
+# 'event/nav/_mobile.html'
+#}
+
+{# If current entry isn't top level, get the parent for nav title #}
+{% set parent_entry = craft.marathon.getTopParent(entry) %}
+
+{# Get nav items from main plugin #}
+{% set nav_items = craft.marathon.getNavItems(entry) %}
+
+<div class="event_nav_wrap mobile">
+	<div class="event_nav">
+		<div class="container">
+			<div class="menu_title">
+				<a class="event_menu_toggle">
+					<span class="nav_button"><i class="fa fa-bars"></i></span>
+					<span class="page_title alternate_font">{{parent_entry.title|default(entry.title)}}</span>
+				</a>
+			</div>
+
+			<div class="event_menu_items">
+				{% if nav_items|length %}
+					<ul class="shuttle_pages">
+						{% for nav_item in nav_items %}
+							<li class="main_font"><a href="#">{{nav_item.title}} <!-- <i class="fa fa-angle-double-down"></i>--></a>
+								<ul class="sub_pages">
+									<li class=""><a class="sub_page_link" href="{{nav_item.url}}">{{nav_item.title}}</a></li>
+									{% for sub_page in nav_item.sub_pages %}
+										{% set active = '' %}
+										{% if sub_page.url == entry.url %}{% set active = ' active' %}{% endif %}
+										<li class="{{active}}">
+											<a class="sub_page_link" href="{{sub_page.url}}">{{sub_page.title}}</a>
+											<p><a class="glance_link">{{sub_page.glance|default('no glance')}}</a></p>
+										</li>
+									{% endfor %}
+								</ul>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div><!-- .event_nav_wrap -->
