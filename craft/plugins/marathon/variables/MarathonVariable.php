@@ -84,4 +84,19 @@ class MarathonVariable
 	}
 
 
+    public function getConstantContactSubscribeSettings(){
+        // Again, second arg is if you just want enabled plugins
+        $plugin = craft()->plugins->getPlugin('constantContactSubscribe', false);
+
+        if( $plugin->isInstalled && $plugin->isEnabled ){
+            return craft()->plugins->getPlugin("constantContactSubscribe")->getSettings();
+        }
+
+        return false;
+
+    }
+
+
+
+
 }

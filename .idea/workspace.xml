@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b28b4f3e-79c0-429e-ab1f-8372b6337bdc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/ConstantContactSubscribePlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/controllers/ConstantContactSubscribe_ListController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/fieldtypes/ConstantContactSubscribe_ConstantContactListsFieldType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/services/ConstantContactSubscribeService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/templates/fieldtype/input.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/templates/settings.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/composer/ClassLoader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/composer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/composer/autoload_classmap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/composer/autoload_files.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/composer/autoload_namespaces.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/composer/autoload_psr4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/composer/autoload_real.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/composer/installed.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/examples/addOrUpdateContact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/examples/createAndScheduleCampaign.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/examples/getAccessToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/examples/importFromFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/examples/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/examples/uploadFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Auth/CtctDataStore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Auth/CtctOAuth2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Auth/SessionDataStore.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Account/AccountInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Account/VerifiedEmailAddress.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Activities/Activity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Activities/ActivityError.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Activities/AddContacts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Activities/AddContactsImportData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Activities/ExportContacts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Component.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Contacts/Address.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Contacts/Contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Contacts/ContactList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Contacts/CustomField.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Contacts/EmailAddress.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Contacts/Note.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/EmailMarketing/Campaign.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/EmailMarketing/CampaignPreview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/EmailMarketing/ClickThroughDetails.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/EmailMarketing/MessageFooter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/EmailMarketing/Schedule.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/EmailMarketing/TestSend.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Library/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Library/FileUploadStatus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Library/Folder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Library/Thumbnail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/ResultSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Tracking/BounceActivity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Tracking/ClickActivity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Tracking/ForwardActivity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Tracking/OpenActivity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Tracking/SendActivity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Tracking/TrackingActivity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Tracking/TrackingSummary.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Components/Tracking/UnsubscribeActivity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/ConstantContact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Exceptions/CtctException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Exceptions/IllegalArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Exceptions/OAuth2Exception.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/AccountService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/ActivityService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/BaseService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/CampaignScheduleService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/CampaignTrackingService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/ContactService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/ContactTrackingService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/EmailMarketingService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/LibraryService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Services/ListService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/SplClassLoader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/Util/Config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/WebHooks/CTCTWebhookUtil.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/src/Ctct/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Auth/CtctOAuth2UnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Account/get_account_info.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Account/get_verified_email_addresses.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Activities/get_activities.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Activities/get_activity.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Activities/post_add_contacts.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Activities/post_clear_lists.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Activities/post_export_contacts.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Activities/post_remove_contacts_from_lists.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Auth/get_access_token.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Auth/token_info.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Campaigns/get_campaign.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Campaigns/get_campaigns.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Campaigns/get_preview.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Campaigns/get_schedule.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Campaigns/get_schedules.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Campaigns/post_test_send.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Contacts/get_contact.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Contacts/get_contacts.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Contacts/get_contacts_no_next.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/JsonLoader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Library/get_file_upload_status.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Library/get_library_file.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Library/get_library_files.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Library/get_library_folder.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Library/get_library_folders.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Lists/get_list.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Lists/get_lists.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Tracking/get_bounces.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Tracking/get_clicks.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Tracking/get_forwards.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Tracking/get_opens.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Tracking/get_opt_outs.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Tracking/get_sends.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Json/Tracking/get_summary.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/AccountServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/ActivityServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/CampaignScheduleServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/CampaignTrackingServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/ContactServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/ContactTrackingServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/EmailCampaignServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/LibraryServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/Services/ListServiceUnitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/constantcontact/constantcontact/test/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/UPGRADING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/ClientInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Cookie/CookieJar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Cookie/CookieJarInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Cookie/FileCookieJar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Cookie/SessionCookieJar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Cookie/SetCookie.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/BadResponseException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/ClientException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/ConnectException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/GuzzleException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/SeekException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/ServerException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/TooManyRedirectsException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Exception/TransferException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Handler/CurlFactoryInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Handler/StreamHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/HandlerStack.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/MessageFormatter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Middleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/Pool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/RequestOptions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/RetryMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/TransferStats.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/UriTemplate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/guzzle/src/functions_include.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/AggregateException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/CancellationException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/EachPromise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/FulfilledPromise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/Promise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/PromiseInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/PromisorInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/RejectedPromise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/RejectionException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/TaskQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/src/functions_include.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/AggregateExceptionTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/EachPromiseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/FulfilledPromiseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/NotPromiseInstance.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/PromiseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/RejectedPromiseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/RejectionExceptionTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/TaskQueueTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/Thennable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/promises/tests/functionsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/AppendStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/BufferStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/CachingStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/DroppingStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/FnStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/InflateStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/LazyOpenStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/LimitStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/MessageTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/MultipartStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/NoSeekStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/PumpStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/Request.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/Response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/Stream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/StreamDecoratorTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/StreamWrapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/Uri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/src/functions_include.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/AppendStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/BufferStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/CachingStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/DroppingStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/FnStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/FunctionsTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/InflateStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/LazyOpenStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/LimitStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/MultipartStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/NoSeekStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/PumpStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/RequestTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/ResponseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/StreamDecoratorTraitTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/StreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/StreamWrapperTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/UriTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/guzzlehttp/psr7/tests/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/MessageInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/RequestInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/ResponseInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/ServerRequestInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/StreamInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/UploadedFileInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/UriInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craft/config/db.php" afterPath="$PROJECT_DIR$/craft/config/db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craft/config/general.php" afterPath="$PROJECT_DIR$/craft/config/general.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craft/plugins/marathon/variables/MarathonVariable.php" afterPath="$PROJECT_DIR$/craft/plugins/marathon/variables/MarathonVariable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/craft/templates/base/partials/footer.html" afterPath="$PROJECT_DIR$/craft/templates/base/partials/footer.html" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/config/db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="general.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/config/general.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="93" column="31" lean-forward="false" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UriInterface.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/UriInterface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/templates/base/partials/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="154" column="73" lean-forward="false" selection-start-line="154" selection-start-column="73" selection-end-line="154" selection-end-column="73" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MarathonVariable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/plugins/marathon/variables/MarathonVariable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConstantContactSubscribePlugin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/ConstantContactSubscribePlugin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConstantContactSubscribeService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/services/ConstantContactSubscribeService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_entry.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/craft/templates/event/_entry.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text_page.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htdocs/assets/css/text_page.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="2459" column="48" lean-forward="true" selection-start-line="2459" selection-start-column="48" selection-end-line="2459" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mcm_bk/craft/templates/base/partials/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="93" column="22" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="93" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&lt;form</find>
+      <find>&lt;/form</find>
+      <find>&lt;/form&gt;</find>
+      <find>butt</find>
+      <find>form</find>
+      <find>form</find>
+      <find>constantContactList</find>
+      <find>.button</find>
+      <find>.button</find>
+      <find>button</find>
+      <find>#mce-EMAIL</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/craft/config/db.php" />
+        <option value="$PROJECT_DIR$/craft/config/general.php" />
+        <option value="$PROJECT_DIR$/../mcm_bk/craft/templates/base/partials/footer.html" />
+        <option value="$PROJECT_DIR$/craft/plugins/marathon/variables/MarathonVariable.php" />
+        <option value="$PROJECT_DIR$/craft/templates/base/partials/footer.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="craft" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="craft" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="craft" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="craft" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="craft" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marathon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="craft" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marathon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="variables" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="craft" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imageresizer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/craft/plugins" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b28b4f3e-79c0-429e-ab1f-8372b6337bdc" name="Default" comment="" />
+      <created>1536228975249</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536228975249</updated>
+      <workItem from="1536228978299" duration="8787000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8787000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="728" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/craft/config/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/config/general.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="93" column="31" lean-forward="false" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/plugins/guestentries/events/GuestEntriesEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/plugins/guestentries/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/plugins/guestentries/GuestEntriesPlugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2402">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/plugins/guestentries/templates/_settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/vendor/psr/http-message/src/UriInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mcm_bk/craft/templates/base/partials/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="93" column="22" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="93" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/assets/css/text_page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="2459" column="48" lean-forward="true" selection-start-line="2459" selection-start-column="48" selection-end-line="2459" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/templates/event/_entry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/services/ConstantContactSubscribeService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/plugins/marathon/variables/MarathonVariable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/templates/base/partials/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="154" column="73" lean-forward="false" selection-start-line="154" selection-start-column="73" selection-end-line="154" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/craft/plugins/constantcontactsubscribe/ConstantContactSubscribePlugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

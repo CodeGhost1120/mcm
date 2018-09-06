@@ -94,6 +94,17 @@ return array(
 		'cacheMethod' => 'redis'			  
 	),
 
+
+    'mcm.local' => array(
+        'devMode' => true,
+        'siteUrl' => 'http://mcm.local',
+        'siteName' => 'Marine Marathon - Local',
+        'environmentVariables' => array(
+            'baseUrl'  => 'http://mcm.local/',
+            'basePath' => BASEPATH . 'http/',
+        ),
+    ),
+
 	     
 
 );
