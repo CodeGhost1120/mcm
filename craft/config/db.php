@@ -19,6 +19,14 @@ return array(
     'database' => 'mcm',
   ),
 
+
+    'mcm.local' => array(
+        'server' => 'localhost',
+        'user' => 'root',
+        'password' => 'root',
+        'database' => 'mcm_10_september_2018',
+    ),
+
  'mcm.nclud.com' => array(
   'server' => 'db6.browsermedia.com',
   'user' => 'mcm_staging',
