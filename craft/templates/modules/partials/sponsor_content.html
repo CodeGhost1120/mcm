@@ -1,0 +1,21 @@
+{% set image = entry.sponsorsImage.first()%}
+
+
+<div class="rich_text_module container standard_content">
+	<div class="rich_text">
+ 			<div class="standard_content">
+				<h3 id="presenting-sponsors">Presenting Sponsors</h3>
+			</div>
+
+			<p>
+				{% if image %}
+					<a href="{{entry.sponsorsUrl}}">
+
+						<img style="float: left; margin: 0px 15px 15px 0px;" alt="Image Sample 4" src="{% if image %}{{image.url}}{% endif %}"" width="100">
+					</a>
+				{% endif %}
+				<b>{{entry.sponsorsName}}</b>
+				<em>{{entry.sponsorsDescription}}</em>
+			</p>
+	</div>
+</div>

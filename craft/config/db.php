@@ -24,7 +24,7 @@ return array(
         'server' => 'localhost',
         'user' => 'root',
         'password' => 'root',
-        'database' => 'mcm_10_september_2018',
+        'database' => 'mcm_anand',
     ),
 
  'mcm.nclud.com' => array(
