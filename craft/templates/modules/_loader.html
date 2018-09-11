@@ -18,9 +18,38 @@
 			{% endif %}
 		{% endif %}
 
-		{% if block.type != 'topLevelIntro' %}
-			{% include 'modules/'~block.type~'/_module.html' %}
+		{% set is_toc_included = 'no_toc' %}
+
+		{% if entry.type == 'textPage' or entry.type == 'textPages' or entry.type == 'pages' %}
+			{% if entry.modules %}
+				{% for block in entry.modules.type('heading') %}
+					{% if block.includeInTableOfContents %}
+
+						{% set is_toc_included = 'yes_toc' %}
+
+					{% endif %}
+				{% endfor %}
+			{% endif %}
 		{% endif %}
+
+		{% if block.type != 'topLevelIntro' %}
+			{% if block.type == 'blockText'%}
+				{% if is_toc_included == 'yes_toc' %}
+
+				{% else %}
+					{% include 'modules/'~block.type~'/_module.html' %}
+				{% endif %}
+
+			{% else %}
+				{% include 'modules/'~block.type~'/_module.html' %}
+			{% endif %}
+		{% endif %}
+
+		{#
+		# {% if block.type != 'topLevelIntro' %}
+		#  {% include 'modules/'~block.type~'/_module.html' %}
+		# {% endif %}
+		#}
 
 		{% set break_class = '' %}
 
