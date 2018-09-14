@@ -97,6 +97,7 @@ return array(
 
     'mcm.local' => array(
         'devMode' => true,
+        'cache' => false,
         'siteUrl' => 'http://mcm.local',
         'siteName' => 'Marine Marathon - Local',
         'environmentVariables' => array(
