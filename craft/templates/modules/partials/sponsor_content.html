@@ -1,21 +1,42 @@
-{% set image = entry.sponsorsImage.first()%}
 
+<style type="text/css">
+	.content {
+		padding: 0 0 0 120px; /* 75px being the width of the thumbnail + how much space you want to put between it and your text */
+		position: relative; /* So the thumbnail is relative to this */
+	}
+
+	.content a {
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+</style>
+
+{% set image = entry.sponsorsImage.first()%}
+{% if image  %}
+{% set cssClass = 'content' %}
+{% else %}
+{% set cssClass = 'content1' %}
+{% endif %}
 
 <div class="rich_text_module container standard_content">
 	<div class="rich_text">
- 			<div class="standard_content">
-				<h3 id="presenting-sponsors">Presenting Sponsors</h3>
-			</div>
+		<div class="standard_content">
+			<h3 id="presenting-sponsors">Presenting Sponsors</h3>
+		</div>
 
-			<p>
-				{% if image %}
-					<a href="{{entry.sponsorsUrl}}">
+		<div class="{{cssClass}}">
+			{% if image  %}
+			<a href="{{entry.sponsorsUrl}}" class="sponser_image">
+				<img  alt="{{entry.sponsorsName}}" src="{% if image %}{{image.url}}{% endif %}"" width="100">
+			</a>
+			{% endif %}
 
-						<img style="float: left; margin: 0px 15px 15px 0px;" alt="Image Sample 4" src="{% if image %}{{image.url}}{% endif %}"" width="100">
-					</a>
-				{% endif %}
-				<b>{{entry.sponsorsName}}</b>
-				<em>{{entry.sponsorsDescription}}</em>
-			</p>
+			<h6 style="font-size: 1.5em;">{{entry.sponsorsName}}</h6>
+			<em>{{entry.sponsorsDescription}}</em>
+
+		</div>
+
+
 	</div>
 </div>
